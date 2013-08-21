@@ -4,7 +4,7 @@
 %\geometry{showframe}% for debugging purposes -- displays the margins
 
 %%%% Packages to make things pretty
-\usepackage{amsmath}
+\usepackage{amsmath,amsthm}
 \usepackage{booktabs}
 \usepackage{graphicx}
 \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
@@ -13,11 +13,25 @@
 \usepackage{fancyvrb}
 \fvset{fontsize=\normalsize}
 \usepackage{multicol}
-%%%%
+\usepackage{pdfpages}
+
+%%%% Theorem Evironments
+\theoremstyle{definition}
+\swapnumbers
+\newtheorem{problem}{Problem}[section]
+\newtheorem{conjecture}[problem]{Conjecture}
+\newtheorem*{definition}{Definition}
+\newtheorem*{theorem}{Theorem}
+\newtheorem{question}[problem]{Question}
+\newtheorem{challenge}[problem]{Challenge}
+\newtheorem*{postulate}{Postulate}
+
+%%%%%
+
 
 \title{}
 \author[]{}
-\date{August 2013} 
+\date{} 
 
 \begin{document}
 
