@@ -32,3 +32,6 @@
 *.tdo
 *.ggb
 *.pdf
+*.sage-backup
+*.sage-chat
+*.term
