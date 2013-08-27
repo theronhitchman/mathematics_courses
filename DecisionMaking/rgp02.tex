@@ -19,6 +19,7 @@
 \newtheorem{example}{Example}
 \newtheorem{exercise}[question]{Exercise}
 \newtheorem*{challenge}{Challenge}
+\newtheorem{task}[question]{Task}
 
 \begin{document}
 
@@ -52,11 +53,92 @@ It is possible that a student might also:
 
 \section*{Reading and Questions for 28 August}
 
+Now that we have encoded attempted solutions to the picture hanging puzzle into diagrams and then symbols, we want to use these symbols to help us solve the puzzle.
+But first, we should note that there are several features of our symbol scheme we should understand more clearly.
 
+\subsection*{Changing Direction}
 
+The process for deciding on symbols depends upon a choice of ``direction of travel.''
+For example, the diagrams for $AB$ and $B^*A^*$ are the same, except for the direction of travel along the curve.
+\begin{task}
+Draw the diagrams corresponding to the symbols $AB$ and $B^*A^*$. Verify that these correspond to the same attempt to solve the picture hanging puzzle, except for the  direction of travel.
+\end{task}
+Now, that one is pretty straightforward.
+Let's check others.
+\begin{exercise}
+For each of the symbols below, \underline{draw} the corresponding diagram, and \underline{read the symbol} you get when you travel along the curve in the other direction.
+\begin{itemize}
+\item $ABAB$,
+\item $AB^*A^*$,
+\item $AB^*AA$.
+\end{itemize}
+\end{exercise}
+So now you have several examples to think about.
+(Psst. Do any of these solve the picture hanging puzzle? Check!)
 
-\begin{thebibliography}{9}
+\begin{question}
+A single diagram has two symbols, one for each direction of travel along the string.
+What is the relationship between the two possible symbols of a single diagram.
+\end{question}
 
- \end{thebibliography}
+\subsection*{Removing a Nail}
+
+An important part of the picture hanging puzzle is that you must remove nails.
+What happens to the symbols involved?
+
+There is no reason we cannot assign symbols to a configuration with only one nail. But if there is only one nail, we do not expect to see the label for the second nail in our symbol.
+\begin{example}
+Consider the diagram for the symbol $AB$.
+(This is the ``standard'' way to hang a picture on two nails.)
+If we remove the nail labelled $B$, then we get a configuration that should be labelled $A$.
+(\textbf{Draw this to check it.})
+\end{example}
+
+\begin{exercise}
+For each of the symbols below, \underline{draw} the diagram which corresponds, \underline{draw} the diagram with nail $A$ removed and \underline{find} the new symbol.
+Then, \underline{draw} the diagram with the nail $B$ removed and \underline{find} the new symbol.
+\end{exercise}
+
+\begin{question}
+What effect does removing a nail have on the symbols associated to a particular attempted solution to the picture hanging puzzle.
+\end{question}
+
+\subsection*{About those ${}^*$'s}
+
+Something interesting happens when you remove nail $B$ from the configuration $ABA^*$.
+The resulting configuration is $AA^*$.
+\textbf{Draw this configuration.} 
+Do you see that $AA^*$ is a poor description?
+If we pull the ends of the wire, that loop over nail A will shrink away!
+The symbol $AA^*$ is the same as no symbol at all.
+\begin{question}
+What should the ``empty'' symbol represent, physically, in terms of the picture and how it hangs on the wall?
+\end{question}
+
+\begin{task}
+Consider the three symbols below.
+For each one, \underline{draw} the corresponding diagram.
+Can the diagram be meaningfully simplified?
+If so, write down the symbol for the simplified diagram.
+\begin{itemize}
+\item $ABB^*AB$
+\item $BA^*ABAA^*$
+\item $BB^*A^*A$
+\end{itemize}
+\end{task}
+
+\begin{question}
+Describe a rule for simplifying a symbol that encapsulates what you have just learned.
+\end{question}
+
+\subsection*{Challenge Question}
+
+\begin{challenge} 
+Now that you have some more knowledge and experience, can you solve the 2 nail picture hanging puzzle?
+\end{challenge}
+
+%\begin{thebibliography}{9}
+
+ %\end{thebibliography}
 
 \end{document}
