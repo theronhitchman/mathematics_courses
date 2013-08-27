@@ -34,3 +34,25 @@ do short polleverywhere.com test:
 PHP2 with ribbons went well. partial progress was looped solution. one nail works, the other doesn't
 
 Internet connection was down. Verizon service in the classroom is bad. Ugly mess.
+
+
+Meeting Two: 28 Aug
+-------------------
+
+Phase 1: Do a bit of peer instruction/guided practice wrap up. polleverywhere questions:
+
+1. question: Which pair of diagram and symbolic description is incorrect?
+    + give three options with pictures and symbols
+
+2. question: will the correct ones solve PHP2?
+
+3. question: which diagram goes with symbol X?
+    + give two options
+
+4. question: will either of these solve PHP2?
+
+5. question: I have solved PHP2:  T/F
+
+Phase 2: Give time to discuss & play. manipulatives available. work in groups of 3.
+
+#### what happened ####
