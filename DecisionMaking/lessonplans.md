@@ -56,3 +56,16 @@ Phase 1: Do a bit of peer instruction/guided practice wrap up. polleverywhere qu
 Phase 2: Give time to discuss & play. manipulatives available. work in groups of 3.
 
 #### what happened ####
+
+The Peer Instruction bit went reasonably well. Some students got "expired shortcode" errors when texting, so only 50/66 students were able to participate.
+Still, things went as I was told they might. First run: mixed results tending to the correct answer. Second run: right answer over 90%. quick explanation and repeat.
+
+Five students claimed to have solved PHP2. Four had found the solution ABA\*B\*. One had an incorrect solution. This threw off my plan for phase two. 
+
+We did a think-pair share to generate what puzzle there might be for _three_ nails. We got two versions:
+
+PHP3: Find a way to hang a picture on three nails so that removing any one nail makes the picture fall down.
+
+PHP3^2: Find a way to hang a picture on three nails so that removing any one nail leaves the picture hanging, but removing any choice of two nails makes the picture fall down.
+
+I had to adjust the last question on the RGP for Friday (to account for the solution being public). New question is to find _other_ solutions which are genuinely different.
