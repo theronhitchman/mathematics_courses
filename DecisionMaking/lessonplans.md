@@ -77,15 +77,15 @@ Meeting Three: 30 Aug
 Phase 1: PollEverywhere questions about reversing direction and pulling nails.
 
 1. Question: Two of these symbols represent the same diagram, just read by traveling the curve in the two different directions. One is a different diagram. Which one is the odd man out?
-    +
-    +
-    +
+    + one
+    + two
+    + one read other way
 
 2. Question: Consider the diagram with symbol X. What symbol do you get from reversing the direction of travel along the curve?
-    +
-    +
-    +
-    +
+    + switch order
+    + switch stars
+    + correct (both above)
+    + mixed up.
 
 3. Will the wrapping ABB\*A\* hold the picture up?
     + Yes
