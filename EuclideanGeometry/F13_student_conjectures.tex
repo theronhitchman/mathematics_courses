@@ -1,0 +1,53 @@
+% Euclidean Handout Number One Fall 2013
+\documentclass{tufte-handout}
+
+%\geometry{showframe}% for debugging purposes -- displays the margins
+
+%%%% Packages to make things pretty
+\usepackage{amsmath,amsthm}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+\graphicspath{{graphics/}}
+\usepackage{units}
+\usepackage{fancyvrb}
+\fvset{fontsize=\normalsize}
+\usepackage{multicol}
+\usepackage{pdfpages}
+
+%%%% Theorem Evironments
+\theoremstyle{definition}
+
+\newtheorem{problem}{Problem}
+\newtheorem{conjecture}[problem]{Conjecture}
+\newtheorem*{definition}{Definition}
+\newtheorem*{theorem}{Theorem}
+\newtheorem{question}[problem]{Question}
+\newtheorem{challenge}[problem]{Challenge}
+
+%%%%%
+
+
+\title{Euclidean Geometry}
+\author[]{Class Conjectures}
+\date{Fall 2013} 
+
+\begin{document}
+
+\maketitle
+
+\renewcommand{\theproblem}{\Alph{problem}}
+
+\begin{conjecture}[O'Connell]
+Let $A, B, D$ and $K$ be four points.
+\marginnote{28 August: Arose from work on Conjecture 1.2}
+If angle $AKB$ and angle $AKD$ are right angles, then the points $B, D$ and $K$ are collinear.
+\end{conjecture}
+
+\begin{conjecture}[Dolash]
+Let $ABC$ be an isosceles triangle with $AB$ congruent $BC$.
+\marginnote{28 August: Arose from work on Conjecture 1.1. Settled 30 August.}
+The segment joining $B$ to the midpoint of the opposite side is also the angle bisector at $B$.
+\end{conjecture}
+
+\end{document}
