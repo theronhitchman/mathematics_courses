@@ -152,7 +152,13 @@ Phase 1: Do peer instruction polling for short time.
 Phase 2: Small group play time!
 get solutions to PHP3 and PHP4, if you can.
 
+#### What Happened ####
 
+
+Meeting Five: 5 September
+-------------------------------------
+
+Activity Day: Human Knot game.
 
 
 
