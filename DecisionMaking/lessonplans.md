@@ -158,12 +158,26 @@ get solutions to PHP3 and PHP4, if you can.
 Meeting Five: 5 September
 -------------------------------------
 
-Activity Day: Human Knot game.
+Activity Day: Human Knot game. Take class outside.
 
+Phase One:  four person groups "any old connections."
+Try to untangle.
+Check for knots or links.
+(Links are more likely.)
 
+Next try six person groups (maybe five)
 
+Then apply rules: 
 
++ if group has even number of people: everyone grasps a right hand of someone _not_ next to them with their right hand.
++ if group has odd number of people: all but one person does that, but the last person uses right hand to grab some left hand not next to them.
++ Then grab left hands of people not next to them.
 
+Phase Two: Do larger groups
+
+Say size 9 or ten with the rules
+
+Sum up discussion with ideas of "knot," "link," and "isotopy" for topological equivalence
 
 
 
