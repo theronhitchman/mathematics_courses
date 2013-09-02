@@ -116,10 +116,41 @@ Then tell them to solve puzzle PHP3 and PHP3^2. pencil and paper should be enoug
 
 Possible: discuss idea of _topology_.
 
+#### What Happened ####
 
+Never got past phase 1.
+questions went well, but six of them fills an hour.
+Best one was \#4. 
+Students were split 3/2 in favor of correct response.
+At revote after discussion, there was _no change_.
+I gave a short discussion about which was correct and why.
+Response to \#5 was unanimous on first vote.
+That was awesome.
 
+Meeting Four: 3 September
+--------------------------------------
 
+Phase 1: Do peer instruction polling for short time.
 
+1. Question: The following wire wrappings all start BA\*.  Which one is a solution to PHP2?
+
+    + BA\*AB
+    + BA\*AB\*
+    + BA\*BA
+    + BA\*B\*A
+
+2. Question: Consider the attempted solution to PHP3 given by ACB\*A\*C. Which of the following make the picture fall down? 
+
+	+ pull A only
+	+ pull B only
+	+ pull C only
+	+ pull A and B together
+	+ pull A and C together
+	+ pull B and C together
+	+ none
+
+Phase 2: Small group play time!
+get solutions to PHP3 and PHP4, if you can.
 
 
 
