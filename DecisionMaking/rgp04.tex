@@ -20,6 +20,7 @@
 \newtheorem{example}{Example}
 \newtheorem{exercise}[question]{Exercise}
 \newtheorem*{challenge}{Challenge}
+\newtheorem{task}{Task}
 
 \begin{document}
 
@@ -37,7 +38,8 @@
 \rfoot{\emph{\thepage\ of \pageref{LastPage}}}
 
 \section*{Introduction}
-You will learn about the basic idea behind the word topology. You will see how the essential features of the picture hanging puzzles we have studied are really topological.
+You will learn about the basic idea behind the word topology.
+You will see how the essential features of the picture hanging puzzles we have studied are really topological.
 
 \section*{Goals}
 At the end of this assignment, a student should be able to:
@@ -50,13 +52,78 @@ Also, it is possible a student might be able to:
 \item Give examples of other situations where topological reasoning is important or useful.
 \end{compactitem}
 
-\section*{Reading and Questions for 5 September}
+\section*{Reading and Questions for 6 September}
 
 \subsection*{What is Topology?}
 
-\emph{Topology} is the branch of mathematics
+
+\emph{Topology} is a branch of mathematics. In its way, it has equal footing with other branches of mathematics, like:
+\begin{compactitem}
+\item algebra (study of abstract structure)
+\item analysis (study of mathematical functions)
+\item number theorem (study of properties of numbers of various kinds)
+\item geometry (study of shapes)
+\end{compactitem}
+
+In particular, topology is \emph{the science of relative position.}
+It is a bit like geometry, in that it studies shapes, but where geometry involves making measurements of things like lengths and angles, topology avoids measurements and instead concerns itself with just the relationships between large-scale features that can be described without them.
+
+For example, from a geometric point of view a small circle and a large circle are different because we can measure their circumferences and use those numbers to tell them apart.
+
+[picture here?]
+
+But from a topological point of view, the circles are ``the same.''
+Each is just a circle.
+
+How are they ``the same?''
+Well, the specifics of \emph{topological equivalence} vary from problem to problem.
+(We want to have the freedom to work with the notion that makes sense in a given situation.)
+One thing that all notions of topological equivalence have in common is the idea of ``continuous deformation.''
+The circles above are topologically equivalent because we can imagine slowly deforming the large circle into the small one by shrinking it, and at every point along the way our figure is still ``essentially a circle.''
+We do not have to break the figure and reglue the ends.
+We can just ``continuously deform'' the one shape into the other.
+
+Of course, there are lots of shapes which can be continuously deformed into a circle.
+
+[picture here.]
+
+However, this figure eight in the plane is different!
+There is a point where the curve crosses itself.
+At that point, the shape looks more like an $+$ than a \textbar, and those shapes are distinguishable without measuring lengths or angles.
+
 
 \subsection*{Topology and Picture Hanging Puzzles}
+
+Where is the topology in the set of picture hanging puzzles?
+Consider the two attempted solutions below.
+
+[picture]
+
+When you pull the wire down at the ends (by hanging the picture), you see that the loop $B^*B$ over nail B pulls out, and we get left with just $A$.
+That ``pulling taut'' realizes a continuous deformation between the two situations.
+These two arrangements are ``topologically equivalent,'' and that is the type of equality that is relevant to the question at hand.
+
+Note that the following \emph{geometric} considerations are not important to us when solving picture hanging puzzles.
+\begin{compactenum}
+\item the distance between the nails;
+\item the actual positions of the nails (If we move the nails a little bit, nothing important changes.); and
+\item the thickness of the wire.
+\end{compactenum}
+
+\begin{task}
+In your own words, describe what topology is and how it differs from geometry.
+It might help to write this out in a paragraph.
+It might help to tell a friend.
+It would be very helpful to try out your explanation on a classmate and then discuss the similarities and differences between your descriptions.
+\end{task}
+
+\subsection*{Where else might topology be relevant?}
+
+belt \& loops example
+
+\begin{challenge}
+Think of one or two other examples of situtations where topological properties are the important ones.
+\end{challenge}
 
 
 
