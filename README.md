@@ -20,4 +20,4 @@ This will grow over time, but current courses include
     A liberal arts mathematics course at the freshman level. Typically a terminal mathematics course for
     those choosing a non-technical major. The class is sometimes large (approx 70 students) so IBL & Peer
     Instruction Techniques are used. Topics include Cantor's theory of infinite sets, probability and
-    statistics, and classifying surfaces.
+    statistics, and an introduction to topology (picture hanging puzzles, knots, links, classifying surfaces).
