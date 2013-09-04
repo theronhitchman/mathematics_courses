@@ -15,6 +15,8 @@
 \usepackage{subcaption}
 \usepackage{paralist}
 
+\usepackage{tikz}
+
 \theoremstyle{definition}
 \newtheorem{question}{Question}
 \newtheorem{example}{Example}
@@ -70,7 +72,15 @@ It is a bit like geometry, in that it studies shapes, but where geometry involve
 
 For example, from a geometric point of view a small circle and a large circle are different because we can measure their circumferences and use those numbers to tell them apart.
 
-[picture here?]
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[scale=1,cap=round,>=latex]
+    \draw[thick] (0cm,0cm) circle(2cm);
+    \draw[thick] (5cm,0cm) circle(1cm);
+\end{tikzpicture}
+\caption{Two circles.}
+\end{figure}
+
 
 But from a topological point of view, the circles are ``the same.''
 Each is just a circle.
@@ -85,9 +95,22 @@ We can just ``continuously deform'' the one shape into the other.
 
 Of course, there are lots of shapes which can be continuously deformed into a circle.
 
-[picture here.]
+\begin{figure}[h]
+\centering
+%\begin{tikzpicture}[scale=1]
+%    \draw[very thick] (0,0) circle[x radius = 2 cm, y radius = 1 cm];
+%\end{tikzpicture}
+\includegraphics[height=3in]{rgp04pics/topcircle.png}
+\caption{Three examples of  topological circles.}
+\end{figure}
 
 However, this figure eight in the plane is different!
+\begin{figure}[h]
+\centering
+\includegraphics[height=2in]{rgp04pics/fig8.png}
+\caption{Not a circle. Not even up to a continuous deformation.}
+\end{figure}
+
 There is a point where the curve crosses itself.
 At that point, the shape looks more like an $+$ than a \textbar, and those shapes are distinguishable without measuring lengths or angles.
 
@@ -97,7 +120,19 @@ At that point, the shape looks more like an $+$ than a \textbar, and those shape
 Where is the topology in the set of picture hanging puzzles?
 Consider the two attempted solutions below.
 
-[picture]
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}[b]{0.4\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{rgp04pics/A.png}
+     \end{subfigure}
+     \qquad
+     \begin{subfigure}[b]{0.4\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{rgp04pics/ABsB.png}
+     \end{subfigure}
+\caption{Two topologically equivalent wire wrappings.}
+\end{figure}
 
 When you pull the wire down at the ends (by hanging the picture), you see that the loop $B^*B$ over nail B pulls out, and we get left with just $A$.
 That ``pulling taut'' realizes a continuous deformation between the two situations.
@@ -119,14 +154,18 @@ It would be very helpful to try out your explanation on a classmate and then dis
 
 \subsection*{Where else might topology be relevant?}
 
-belt \& loops example
+How do belt loops on a pair of pants make a belt more effective?
+Topology!
+The belt and the loops are \emph{linked}.
+So the pants cannot fall down unless the belt goes too.
+
+Now, keeping the belt up is a \emph{geometry} problem.
+The length of the belt should be reasonably matched to the perimeter of some cross-section of the wearer.
+But you knew that.
 
 \begin{challenge}
 Think of one or two other examples of situtations where topological properties are the important ones.
 \end{challenge}
-
-
-
 
 %\begin{thebibliography}{9}
 %\end{thebibliography}
