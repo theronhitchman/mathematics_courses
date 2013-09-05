@@ -120,7 +120,7 @@ Possible: discuss idea of _topology_.
 
 Never got past phase 1.
 questions went well, but six of them fills an hour.
-Best one was \#4. 
+Best one was \#4.
 Students were split 3/2 in favor of correct response.
 At revote after discussion, there was _no change_.
 I gave a short discussion about which was correct and why.
@@ -139,7 +139,7 @@ Phase 1: Do peer instruction polling for short time.
     + BA\*BA
     + BA\*B\*A
 
-2. Question: Consider the attempted solution to PHP3 given by ACB\*A\*C. Which of the following make the picture fall down? 
+2. Question: Consider the attempted solution to PHP3 given by ACB\*A\*C. Which of the following make the picture fall down?
 
 	+ pull A only
 	+ pull B only
@@ -154,6 +154,15 @@ get solutions to PHP3 and PHP4, if you can.
 
 #### What Happened ####
 
+Questions did not go very well.
+Split and same split after revote.
+We discussed.
+
+Then I gave them time to discuss PHP3 and PHP4.
+It became rapidly clear that many of them were pretty lost.
+I can't tell if this is beacuse the materials are ineffective, or beacuse they didn't prepare for class.
+Perhaps I should spend time discussing "how to succeed" with them, and talk about how college is different from high school.
+
 
 Meeting Five: 5 September
 -------------------------------------
@@ -167,7 +176,7 @@ Check for knots or links.
 
 Next try six person groups (maybe five)
 
-Then apply rules: 
+Then apply rules:
 
 + if group has even number of people: everyone grasps a right hand of someone _not_ next to them with their right hand.
 + if group has odd number of people: all but one person does that, but the last person uses right hand to grab some left hand not next to them.
