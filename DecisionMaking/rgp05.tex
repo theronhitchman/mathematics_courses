@@ -66,6 +66,8 @@ You may wish to have some longer and some shorter.
 
 \section*{Reading and Questions for 9 September}
 
+Acknowledgement: In preparing this unit on knot theory, I have leaned on the sources \cite{Adams, ArtOfMath:knots, knotinfo}.
+
 \subsection*{Knot Theory}
 
 Knot theory is a particular part of topology. 
@@ -97,7 +99,7 @@ What way is it easiest to try and understand what you have made?
 How can you make a comfortable representation of it?
 \end{task}
 
-Here's the main question of knot theory: If you are not allowed to cut the string again, can you twist it around to make it look like an ``ordinary'' circle?
+Here's a central question of knot theory: If you are not allowed to cut the string again, can you twist it around to make it look like an ``ordinary'' circle?
 
 \begin{task}
 Try to untangle your knot so that it looks like an ordinary circle, without undoing the attachment you made. Can you do it?
@@ -108,7 +110,6 @@ If we want to be more ambitious, we can ask
 \begin{quote}
 ''When can you tell if your mess of string is the same as someone else's mess of string?''
 \end{quote}
-
 In fact, this is \underline{the} central problem of knot theory.
 Well, it is usually stated using fancy techincal terms, but that is it.
 
@@ -132,11 +133,34 @@ We just want to spread the crossings out a bit so we can see them all at once.
 This way of laying the string flat on a table so that no two crossings are in the same place is called a \emph{planar projection} of the knot.
 We have literally projected the image of the knot onto a plane (the surface of the table or paper). Let's look at some planar projections.
 
-[figures: unknot, trefoil 1, trefoil 2, figure eight knot]
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}[b]{0.25\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{rgp05pics/3_1.png}
+        \caption{A trefoil knot}
+    \end{subfigure}
+    \hspace{1cm}
+    \begin{subfigure}[b]{0.25\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{rgp05pics/3_1mirror.png}
+        \caption{Another trefoil knot}
+    \end{subfigure}
+    \hspace{1cm}
+    \begin{subfigure}[b]{0.25\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{rgp05pics/4_1.png}
+        \caption{A Figure Eight Knot}
+    \end{subfigure}
+    \caption{Several Interesting Knots with Few Crossings}
+\end{figure}
 
-The \emph{unknot} is our standard ordinary circle.
-It has this funny name in knot theory because we want to keep it around as a knot, but it is not knotted.
-Yeah, unknot is easier to say.
+Notice that in each of these we have represented the crossings by visually breaking the display of the strand that goes underneath. 
+Look closely, the strand that goes over continues unbroken, but the strand that goes under stops and then restarts on the other side of the overstrand.
+We don't really break the string!
+This is a concession we have to make so that our drawing contains the vital information.
+
+
 
 \begin{task}
 Use your string to make both versions of the trefoil above. 
@@ -144,6 +168,10 @@ We want to know if they are really the same knot (they have the same name).
 Try to find a way to rearrange the one string so that it becomes the other string.
 That is, make the crossings look the same.
 \end{task}
+
+The \emph{unknot} is our standard ordinary circle.
+It has this funny name in knot theory because we want to keep it around as a knot, but it is not knotted.
+Yeah, unknot is easier to say.
 
 \begin{task}
 Try to use your string to show that the figure eight knot is essentially the same as the unknot.
@@ -161,7 +189,21 @@ Small parts of it have been handled, but sadly, it is still unsolved in general.
 
 To give you stronger sense of the difficulty, consider the following pair of knots. These two knots gave mathematicians some trouble.
 
-[include perko pair pictures]
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}[b]{0.4\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{rgp05pics/perko1.png}
+        \caption{Mystery Knot Number One}
+    \end{subfigure}
+    \hspace{1cm}
+    \begin{subfigure}[b]{0.4\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{rgp05pics/perko2.png}
+        \caption{Mystery Knot Number Two}
+    \end{subfigure}
+    \caption{A Pair of Naughty Knots}
+\end{figure}
 
 \begin{challenge}
 Decide if these two knots are equivalent under ambient isotopy.
@@ -182,6 +224,12 @@ Or, to state it differently, but not really change the meaning: decide whether o
 	\emph{Knot Theory},
 	available online from \url{http://www.artofmathematics.org/}, 
 	accessed August 15, 2013.
+
+\bibitem{knotinfo}
+	J. C. Cha and C. Livingston, 
+	KnotInfo: Table of Knot Invariants, 
+	\url{http://www.indiana.edu/~knotinfo}, 
+	accessed: September 6, 2013.
 
 \end{thebibliography}
 
