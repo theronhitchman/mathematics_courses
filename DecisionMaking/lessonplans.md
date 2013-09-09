@@ -189,8 +189,34 @@ Say size 9 or ten with the rules
 Sum up discussion with ideas of "knot," "link," and "isotopy" for topological equivalence
 
 
+#### What Happened ####
 
+I collected homework and asked them to get some string, yarn, cord or shoelaces for manipulatives. 
 
+We moved outside to play the ``human knot'' game. 
+
+6 people is enough to be interesting. 
+12 is too many to be workable. 
+8 is "hard".
+
+After twenty minutes, the point had been made.
+I summed up ideas by introducing terms: knot, link, ambient isotopy, crossing.
+
+Meeting 6: 9 September
+---------------------------------
+
+Phase 1: Short discussion about success vs. failure, high school vs. college
+
+Phase 2: ask basic PI questions about knots.
+
+1. Question: Which of these is a knot?
+    + link
+    + knot
+    + both
+
+2-5. Question: Are these the same knot?
+
+go from easy to medium. 
 
 
 
