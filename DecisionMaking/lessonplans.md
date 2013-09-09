@@ -191,12 +191,12 @@ Sum up discussion with ideas of "knot," "link," and "isotopy" for topological eq
 
 #### What Happened ####
 
-I collected homework and asked them to get some string, yarn, cord or shoelaces for manipulatives. 
+I collected homework and asked them to get some string, yarn, cord or shoelaces for manipulatives.
 
-We moved outside to play the ``human knot'' game. 
+We moved outside to play the ``human knot'' game.
 
-6 people is enough to be interesting. 
-12 is too many to be workable. 
+6 people is enough to be interesting.
+12 is too many to be workable.
 8 is "hard".
 
 After twenty minutes, the point had been made.
@@ -216,9 +216,13 @@ Phase 2: ask basic PI questions about knots.
 
 2-5. Question: Are these the same knot?
 
-go from easy to medium. 
+go from easy to medium.
 
+#### What Happened ####
 
+As expected.
+mixed results as students learned to play.
+Attendance was low (nearer to 55 than 70).
 
 
 
