@@ -1,0 +1,142 @@
+\documentclass[12pt,letterpaper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm,headheight=22pt]{geometry}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{lastpage}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{paralist}
+
+\theoremstyle{definition}
+\newtheorem{question}{Question}
+\newtheorem{example}{Example}
+\newtheorem{exercise}[question]{Exercise}
+\newtheorem*{challenge}{Challenge}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{problem}{Problem}
+
+\begin{document}
+
+%Paramètres de mise en forme des paragraphes selon les normes françaises
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+\setlength{\parindent}{0pt}
+
+%Paramètres relatifs aux en-têtes et pieds de page.
+\pagestyle{fancy}
+\lhead{Theron J Hitchman}
+\chead{\Large Reading and Guided Practice \#6}
+\rhead{Fall 2013}
+\lfoot{\emph{Math and Decision Making}}
+\cfoot{}
+\rfoot{\emph{\thepage\ of \pageref{LastPage}}}
+
+\section*{Introduction}
+In this reading, you will learn about Reidemeister moves and their significance for knot theory.
+
+\section*{Goals}
+At the end of this assignment, a student should be able to:
+\begin{compactitem}
+\item Identify and use the three Reidemeister moves when discussing knot equivalence.
+\item Show two knots are equivalent by ambient isotopy by exhibiting a sequence of Reidemester moves.
+\end{compactitem}
+A student might also be able to:
+\begin{compactitem}
+\item Solve a challenging problem using Reidemeister moves.
+\end{compactitem}
+
+\section*{Reading and Questions for 11 September}
+
+\subsection*{Context and History for the Reidemeister moves}
+We have seen that the natural way to view two knots as equivalent is the notion of \emph{ambient isotopy}. We have also played around enough to see that this is very tricky. There is no way to collect ``all of the ambient isotopies possible'' and make sure we have checked them---there are simply too many strange things one can do.
+
+Fortunately, there is a way around this, first described by J.~W.~Alexander and G.~B.~Briggs \cite{AB} and independently by H.~Reidemeister \cite{R}. There are some simple manipulations one can do to a planar projection of a knot, called \emph{Reidemeister moves}. They are important because of the following result, which was proved in the 1920's.
+\begin{theorem}
+Suppose that one is given two planar projections of knots. Then these knots are equivalent by ambient isotopy if and only if there is a finite sequence of \emph{Reidemeister moves} which turns one planar projection into the other.
+\end{theorem}
+
+This is exceedingly good news! You don't have to check ``everything,'' just sequences of these special moves on knots.  
+
+The general problem for comparing two knots is still unsolved, but significant work has been done on the ``unknotting problem.''
+\begin{problem}
+When and how can you tell if a given planar projection of a knot actually represents the unknot?
+\end{problem}
+It is known that there is an algorithm for deciding this question, but the paper describing it  (by Haken \cite{Haken}) is well over 100 pages long. In principle, this means someone could program a computer to check if a given diagram was an unknot or not. [I do not believe anyone has done this.] One problem that could occur is that even if such a computer program could be designed, it might take an unreasonably long time to compute and give you a response. How long might it take? In 1998, Joel Hass and Jeffrey Lagarias proved that it might be long, but not \emph{too} long. Specifically, they showed this:
+\begin{theorem}
+For any planar projection of the unknot having $n$ crossings, there is a sequence of Reidemeister moves which transforms the projection into a regular circle and takes no more than $2^{10^11}n$ moves.
+\end{theorem}
+
+That is a big number, but computers are pretty fast.
+
+\subsection*{The Reidemeister Moves}
+
+So what are the Reidemeister moves? Each move describes a way in which you can change some small bit of information about a crossing in your planar projection without changing the essential qualities of the knot. There are three types of moves, and they are easier to see than to describe.
+
+[[insert moves pictures]]
+
+
+\subsubsection*{Examples and Practice} 
+
+Let us see how to handle some examples of equivalence of planar projections using Reidemeister moves and isotopy.
+
+\begin{example} 
+A simple trefoil with a cheap disguise.
+We just untwist.
+\end{example}
+
+[[insert picture]]
+
+\begin{example}
+A trefoil with a better disguise.
+Here we bring the far right strand ``under the rest of the diagram'' and then untwist.
+\end{example}
+
+[[insert picture]]
+
+
+Now practice.
+
+\begin{exercise} Consider the two planar projections of the figure eight knot below. 
+These are equivalent by a process similar to our second example above.
+Use a sequence of Reidemeister moves to demonstrate that these knots are equivalent. 
+Draw each intermediate knot, and label the sequence of Reidemeister moves you use as you go.
+\end{exercise}
+
+[[insert picture]]
+
+
+\begin{exercise} Consider the two planar projections of the knot below. 
+Use a sequence of Reidemeister moves to demonstrate that these knots are equivalent. 
+Draw each intermediate knot, and label the sequence of Reidemeister moves you use as you go.
+\end{exercise}
+
+[[insert picture]]
+
+
+\begin{challenge}
+The following knot is due to Goeritz. It is known to be a projection of the unknot and it has 9 crossings. 
+Use a sequence of Reidemeister moves to show that this is the unknot.
+Somewhere along the line, your diagram should have more than 9 crossings.
+\end{challenge}
+
+
+%\begin{thebibliography}{9}
+
+
+%\bibitem{Demaine}
+%    Erik Demaine, Martin Demaine, Yair Minsky, Joseph Mitchell, Ronald Rivest, \& Mihai Patrascu,
+%    Picture Hanging Puzzles,
+%    available online at the arXiv: 1203.3602v1,
+%    16 March 2012
+
+%\end{thebibliography}
+
+\end{document}
+%sagemathcloud={"zoom_width":100}
