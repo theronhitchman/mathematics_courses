@@ -225,9 +225,23 @@ mixed results as students learned to play.
 Attendance was low (nearer to 55 than 70).
 
 
+Meeting 7: 11 September
+---------------------------------
+
+Ask them to use Reidemeister Moves to show a figure 8 knot is equivalent to its mirror image.
+
+If there is time, ask them to work on the *nasty unkot* example from Adams pg 16 /meeting 6 question 5.
 
 
+#### What Happened ####
 
+They found this very challenging.
+I haven't given them enough "free play" time.
+Combined with my late release of the RGP assignment, this didn't go very well.
+
+
+Meeting 8: 13 September
+-----------------------------------
 
 
 
