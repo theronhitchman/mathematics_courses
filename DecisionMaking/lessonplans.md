@@ -243,7 +243,47 @@ Combined with my late release of the RGP assignment, this didn't go very well.
 Meeting 8: 13 September
 -----------------------------------
 
+We took a day to settle in and wrap up.
+I asked one question as a poll: give some keywords from our study so far, and we made a word cloud to discuss.
+Then I took questions.
+
+Meeting 9: 16 September
+--------------------------------------
+
+Opportunity to discuss tricolorability.
+four poll questions: each "is this tricolorable" with answer "no." four, five, six and seven crossings.
+
+#### What happened ####
+
+They needed more examples of how to check and then decide if a knot is tricolorable. This day needs to be split into two pieces.
+So RGP09 won't exist!!!
+Next semester I will split RGP08 into 08 and 09.
+08 will introduce tricolorability and how to check with examples
+09 will discuss how it is an invariant.
+
+Meeting 10: 18 September
+---------------------------------------
+
+Discuss how RMs help us to see that tricolorability is an invariant.
 
 
+Meeting 11: 20 September
+---------------------------------------
 
+Links
+Link invariants: number of components, tricolorablity, linking number?
 
+Meeting 12: 23 September
+---------------------------------------
+
+Linking number?
+
+Meeting 13: 25 September
+----------------------------------------
+
+Dowker notation ???
+
+Meeting 14: 27 September
+----------------------------------------
+
+EXAM ONE in class.
