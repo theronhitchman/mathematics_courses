@@ -266,12 +266,27 @@ Meeting 10: 18 September
 
 Discuss how RMs help us to see that tricolorability is an invariant.
 
+Take questions and discuss types of RMs available. check how tricolor ability is preserved.
+
 
 Meeting 11: 20 September
 ---------------------------------------
 
 Links
-Link invariants: number of components, tricolorablity, linking number?
+Link invariants: number of components, tricolorablity, 
+
+Put up five simple links, ask them to differentiate them using our invariants:
+
+1. hopf link
+2. hopf mirror
+3. borromean rings
+4. borromean rings with one circle swapped out for a trefoil
+5. unlink with two components
+
+question 1. Are any of these distinguishable using our invariants? Which invariant do you use to tell some pairs of them apart?
+
+question 2. Are any of these links equivalent via ambient isotopy? If so, find a sequence of RMs that realize the equivalence.
+
 
 Meeting 12: 23 September
 ---------------------------------------
