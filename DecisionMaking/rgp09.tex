@@ -32,28 +32,25 @@
 %Paramètres relatifs aux en-têtes et pieds de page.
 \pagestyle{fancy}
 \lhead{Theron J Hitchman}
-\chead{\Large Reading and Guided Practice \#8}
+\chead{\Large Reading and Guided Practice \#9}
 \rhead{Fall 2013}
 \lfoot{\emph{Math and Decision Making}}
 \cfoot{}
 \rfoot{\emph{\thepage\ of \pageref{LastPage}}}
 
 \section*{Introduction}
-We introduce the notion of \emph{tricolorability} for knots and links. We see how Reidemeister moves help us to understand that tricolorability is an \emph{invariant} for knots and links. We use this information to finally distinguish two of our favorite examples as different.
+We see how Reidemeister moves help us to understand that tricolorability is an \emph{invariant} for knots and links. We use this information to finally distinguish two of our favorite examples as different.
 
 \section*{Goals}
 At the end of this assignment, a student should be able to:
 \begin{compactitem}
-\item Determine if a given knot or link is tricolorable.
 \item Discuss what an invariant is.
 \item Show how tricolorability is preserved by Reidemeister moves.
-\end{compactitem}
-A student might also be able to:
-\begin{compactitem}
-\item Solve a challenging problem about tricolorability.
+\item Explain why tricolorability is a property of a knot or link, and not just a property of a particular diagram.
 \end{compactitem}
 
-\section*{Reading and Questions for 16 September}
+
+\section*{Reading and Questions for 18 September}
 
 How do we tell two knots apart?
 We have a way of saying that two knots are equivalent---we find a sequence of Reidemeister Moves that transforms a planar projection of one knot into a planar projection of the other.
@@ -71,95 +68,57 @@ What we need is something we can measure or compute about a knot or link that he
 
 This kind of thing is called an \emph{invariant}.
 Invariants come in many types: some are numbers, some are answers to yes or no questions, some are more complicated objects. Our object is to introduce an invariant of knots and links of the "yes or no" variety called \emph{tricolorability}.
+We have already discussed the idea of tricolorability for a particular planar projection diagram of a knot or link. 
+The point of this reading is to see that tricolorability is a property of the knot (or link) and not just of a particular projection.
 
-\subsection*{Tricolorability}
-
-First, we need the idea of a \emph{strand} of planar projection of a knot or link.
-A \emph{strand} is one piece of the planar projection from one undercrossing to another with only overcrossings in between.
-For example, the standard unknot has one strand, and the standard trefoil has three strands.
-Note that at any crossing, we will have \textbf{three} strands coming together, the two understrands and the one overstrand.
-
-\begin{figure}[h]
-    \centering
-    \begin{subfigure}{.3\textwidth}
-        \begin{tikzpicture}[scale=1,cap=round,>=latex]
-            \draw[thick] (0cm,0cm) circle(2.5cm);
-        \end{tikzpicture}
-        \caption{The Unknot}
-    \end{subfigure}
-    \hspace{1cm}
-    \begin{subfigure}{.3\textwidth}
-        \includegraphics[width=\textwidth]{rgp08pics/3_1mirror.png}
-        \caption{A Trefoil}
-    \end{subfigure}
-    \caption{Two of our simplest examples.}
-\end{figure}
-
-\begin{exercise}
-Indentify the strands of the unknot and the trefoil in the pictures above.
-\end{exercise}
-
-We shall say that a knot or link is \emph{tricolorable} if each strand of the knot or link can be given one of three colors (it helps to think of them as red, green, and blue), subject to the following two rules:
-\begin{compactitem}
-\item At each crossing, either the three strands all have the same color, or they are all different colors.
-\item At least two colors get used in the process.
-\end{compactitem}
-
-\begin{exercise}
-Show that the trefoil knot is tricolorable by choosing colors for the standard planar projection.
-\end{exercise}
-
-\begin{exercise}
-Show that the unknot is not tricolorable by noting that one of the conditions is impossible for a standard circle projection.
-\end{exercise}
-
-(If it feels unfamiliar to you, the word \emph{show} as instructions for an exercise means come up with an argument explaining why the statement made is true.)
-
-\begin{exercise}
-Show that the ``unlink with two components'' is tricolorable.
-(This is the link with two circles, which happen to not interact at all.
-It is just two circles side-by-side.)
-\end{exercise}
-
-\begin{figure}[h]
-    \centering
-    \begin{tikzpicture}[scale=1,cap=round,>=latex]
-        \draw[thick] (0cm,0cm) circle(2cm);
-        \draw[thick] (5cm,0cm) circle(2cm);
-    \end{tikzpicture}
-    \caption{The Unlink with Two Components}
-\end{figure}
-
-
-
+The main reason for this is the following fact:
+\begin{quote}
+If one planar projection diagram of a knot (or link) is tricolorable, then so is \emph{any other} planar projection diagram of that knot or link. 
+All planar projections of a particular knot are either all tricolorable together, or all not tricolorable together.
+\end{quote}
 
 \clearpage
 
-\begin{exercise}
-Decide which of these three knots with six crossings are tricolorable.
-\end{exercise}
+\subsection*{Tricolorability of Related Diagrams}
+
+In the last Reading and Guided Practice, you showed that a projection of the trefoil knot is tricolorable.
+Here is a projection of the trefoil with a tricoloring.
 
 \begin{figure}[h]
     \centering
-    \begin{subfigure}{.3\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{rgp08pics/6_1.png}
-        \caption{The knot $6_1$.}
-    \end{subfigure}
-    \quad
-    \begin{subfigure}{.3\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{rgp08pics/6_2.png}
-        \caption{The knot $6_2$.}
-    \end{subfigure}
-    \quad
-    \begin{subfigure}{.3\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{rgp08pics/6_3.png}
-        \caption{The knot $6_3$.}
-    \end{subfigure}
-\caption{Three knots with 6 crossings.}
+    \includegraphics[width=.4\textwidth]{knotpics/tricolor_trefoil.png}
+    \caption{A tricoloring of this trefoil projection.}
 \end{figure}
+
+\begin{exercise}
+Find a way to adjust the coloring scheme from the tricoloring above to show that each of these projections of the trefoil are also tricolorable.
+The goal is to change the coloring scheme as little as possible, so 
+The parts of the knot that have not moved are colored just like in the original.
+Your job is to find the right colors for the black strands.
+\end{exercise}
+
+\begin{figure}[h] 
+    \centering
+    \begin{subfigure}{.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{knotpics/tricolor2.png}
+    \end{subfigure}
+    \quad
+    \begin{subfigure}{.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{knotpics/tricolor3.png}
+    \end{subfigure}
+    \quad
+    \begin{subfigure}{.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{knotpics/tricolor4.png}
+    \end{subfigure}
+    \caption{Three more projections of the trefoil.}
+\end{figure}
+
+
+Note that each diagram differs from the previous one by either one or two Reidemeister moves. 
+This is the key idea!
 
 \subsection*{Tricolorability is an Invariant}
 
@@ -186,9 +145,6 @@ This only involves a single strand.
 If we are adding a twist, then the starting strand has only one color.
 After we add a twist, leave everything involved that same color.
 At the new crossing, all three strands are that color, which fits our rule.
-
-
-
 If we are removing a twist, what happens?
 First note that a single strand looped over itself must have only one color. This is because at the crossing, one of the understrands comes back around to be the overstrand at the same crossing.
 Tricolorability requires that each crossing has either one color or three involved.
@@ -200,9 +156,9 @@ Happy and nice.
 What about a type two Reidemeister move?
 I'll draw the relevant pictures here, and leave you to work out the discussion.
 
-\begin{figure}[h]
+\begin{figure}[h!]
     \centering
-    \includegraphics[width=.4\textwidth]{rgp08pics/r2.png}
+    \includegraphics[width=.3\textwidth]{rgp08pics/r2.png}
     \caption{Type two Reidemeister moves.}
 \end{figure}
 
@@ -228,7 +184,7 @@ And thanks to Reidemeister we know that any ambient isotopy can be realized as a
 
 \subsection*{The Importance of Tricolorability}
 
-We saw above that the unknot is not tricolorable, but the trefoil knot is tricolorable.
+We saw in the last reading that the unknot is not tricolorable, but the trefoil knot is tricolorable.
 Now we have discussed why tricolorability is preserved by Reidemeister moves, and hence preserved by any ambient isotopy.
 
 This means that there is no ambient isotopy between the unknot and the trefoil.
