@@ -1,0 +1,229 @@
+\documentclass[12pt,letterpaper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm,headheight=22pt]{geometry}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{lastpage}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{paralist}
+\usepackage{url}
+
+\theoremstyle{definition}
+\newtheorem{question}{Question}
+\newtheorem{example}{Example}
+\newtheorem{exercise}[question]{Exercise}
+\newtheorem*{challenge}{Challenge}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{definition}{Definition}
+
+\begin{document}
+
+%Paramètres de mise en forme des paragraphes selon les normes françaises
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+\setlength{\parindent}{0pt}
+
+%Paramètres relatifs aux en-têtes et pieds de page.
+\pagestyle{fancy}
+\lhead{Theron J Hitchman}
+\chead{\Large Reading and Guided Practice \#1}
+\rhead{Fall 2013}
+\lfoot{\emph{Math and Decision Making}}
+\cfoot{}
+\rfoot{\emph{\thepage\ of \pageref{LastPage}}}
+
+\section*{Introduction}
+This assignment focuses on the basic language of set theory.
+
+\section*{Goals}
+At the end of this assignment, a student should be able to:
+\begin{compactitem}
+\item Demonstrate proper usage of the terms \emph{set}, \emph{element}, and \emph{member}.
+\item Distinguish whether a particular object is, or is not, an element of a given set.
+\item Use set builder notation to describe a set.
+\end{compactitem}
+A student might also be able to:
+\begin{compactitem}
+\item Solve a challenging problem about some large sets.
+\end{compactitem}
+
+\section*{Reading and Questions for 2 October}
+
+In this unit, we shall study the concept of infinity. 
+In particular, we shall explore different concepts of ``number'' and think about how big different collections of numbers are. 
+Numbers began as a way to count things and keep track of how many things you have, so we shall encounter some challenges about counting things.
+
+To talk about all of this clearly and coherently, we will have to be very precise about our use of language.
+The first task is to understand the concepts of \emph{set}, and \emph{element}.
+
+\subsection*{Sets and Elements}
+
+The words \emph{set} and \emph{element} are undefined terms in mathematics.
+They are considered so foundational that we can't clearly say exactly what they are.
+Instead, we can just give some intuitive idea of them.
+
+A \emph{set} is a collection of some things. Those things in the collection are called the \emph{elements} of that set.
+The only way to use these words is to say either
+\begin{quote}
+The object $x$ is an element of the set $S$.
+\end{quote}
+or
+\begin{quote}
+The object $x$ is not an element of the set $S$.
+\end{quote}
+
+\clearpage
+
+Sometimes, the word \emph{member} is used in place of \emph{element}. 
+In this context, \emph{member} and \emph{element} are synonyms.
+If we make this switch, our phrases read
+\begin{quote}
+The object $x$ is a member of the set $S$.
+\end{quote}
+or
+\begin{quote}
+The object $x$ is not a member of the set $S$.
+\end{quote}
+\textbf{Membership is the only thing that matters with sets.} Either your object is a member of the set, or it is not.
+
+\begin{example} We give two new examples of sets.
+\begin{compactitem}
+\item The collection of all students enrolled at UNI is a set.
+Each enrolled student is a member of this set.
+Prof.~Hitchman is not a member of this set.
+The chair on which you are sitting is also not a member of this set.
+
+\item The collection of all even integers is a set. We shall denote this set by the symbol $\mathcal{E}$.
+The numbers $4$, $18$, and $416$ are all elements of $\mathcal{E}$, though not the only ones, by far. 
+The number $227$ is not an element of $\mathcal{E}$.
+\end{compactitem}
+\end{example}
+
+\begin{exercise}
+Note that in the two examples above, one uses the terminology "member of" and the other uses the terminology "element of." Rewrite these sentences by hand, switching the terms around. 
+(Yes. Seriously. Write it out. It will help.)
+\end{exercise}
+
+\subsection*{Notation for Sets}
+
+There are two very common ways to describe a set.
+The first way is just to use regular sentences.
+We did this in the two examples above.
+To make another example, let us first introduce the idea of an arrangement.
+
+
+\begin{definition}
+Suppose you have some things. 
+An \emph{arrangement} of those things is a particular way to make a list out of exactly those things in some order, without repeats and without skipping any.
+\end{definition}
+
+For example, an arrangement of the athletic department mascots for UNI is 
+\begin{quote}
+TC~TK.
+\end{quote}
+A different arrangement of those same mascots is
+\begin{quote}
+TK~TC.
+\end{quote}
+
+\begin{example}
+Let $T$ be the set of all arrangements of the letters A, B, and C.
+\end{example}
+
+\begin{exercise}
+Write down three different elements of the set $T$.
+\end{exercise}
+
+\textbf{Do not read any further until you have attempted that exercise.}
+
+\clearpage
+
+\noindent\textbf{Solution:} 
+What is an element of $T$? An arrangement of the letters of ABC is an element. Well, ABC is one arrangement.
+Then BAC is another one. 
+And BCA yet another.
+Can you find a few more?
+
+\begin{exercise}
+Suppose that on a short trip you pack the following clothes in your bag:
+\begin{compactitem}
+\item three shirts: red, blue, and green
+\item two pairs of pants: blue, and black-and-white checkerboard
+\end{compactitem}
+Let $J$ be the set of outfits you canmake by pairing a shirt with a pair of pants.
+
+List all of the elements of $J$.
+\end{exercise}
+
+\begin{exercise}
+Which is larger, $T$ or $J$?
+Or are they the same size?
+\end{exercise}
+
+Another way to describe a set is by using ``set builder notation.''
+Here you give the name of the set, write an equality symbol, and then list the elements of the set inside a pair of curly braces.
+
+\begin{example}
+$S = \{ 3, 7, 12\}$ is a small set with three elements.
+\end{example}
+
+One thing that is a bit tricky is that your list really should not repeat. If it does, then the repeats do not count as new elements. Remember, all that matters is "Is $x$ a member or is it not a member?" You cannot have an element that is a member more than once. Once is all you get.
+
+\begin{example}
+The sets
+\[
+\{1,1,2,3,5,8,13,21\}
+\] 
+and 
+\[ 
+\{1,2,3,5,8,13,21\}
+\]
+are exactly the same thing. The number $1$ is an element of both. The repeated $1$ in the list for the first set is just a nuisance.
+\end{example}
+
+Some lists become too long to be convenient, so people often use an ellipsis (\dots) to imply that some pattern repeats to describe members of a set.
+
+\begin{example}
+The set of natural numbers is
+\[
+\mathbb{N} = \{1,2,3,4,\ldots\}.
+\]
+\end{example}
+\begin{example}
+The set $T =\{1, 4, 7, 10, 13,\ldots, 3001\}$ has implied members.
+\end{example}
+
+\begin{exercise}
+Give examples of two elements of $T$ that are not explicitly shown in the set builder notation.
+\end{exercise}
+
+\begin{exercise}
+Give examples of two natural numbers which are \textbf{not} members of $T$.
+\end{exercise}
+
+\begin{challenge}
+Let $T$ be the set of all arrangments of the letters ABCDEFGHIJ.
+Let $J$ be the set of all arrangments of the letters KLMNOPQRST.
+Write down some elements of $T$.
+Write down some elements of $J$.
+
+Are these sets the same size?
+Or is it the case that one is larger than the other?
+If one is larger? 
+Which one?
+\end{challenge}
+
+
+
+%\begin{thebibliography}{9}
+%\end{thebibliography}
+
+\end{document}
+%sagemathcloud={"zoom_width":100}
