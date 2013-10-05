@@ -1,0 +1,194 @@
+\documentclass[12pt,letterpaper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm,headheight=22pt]{geometry}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{lastpage}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{paralist}
+\usepackage{url}
+
+\theoremstyle{definition}
+\newtheorem{question}{Question}
+\newtheorem{example}{Example}
+\newtheorem{exercise}[question]{Exercise}
+\newtheorem*{challenge}{Challenge}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{definition}{Definition}
+
+\begin{document}
+
+%Paramètres de mise en forme des paragraphes selon les normes françaises
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+\setlength{\parindent}{0pt}
+
+%Paramètres relatifs aux en-têtes et pieds de page.
+\pagestyle{fancy}
+\lhead{Theron J Hitchman}
+\chead{\Large Reading and Guided Practice \#2}
+\rhead{Fall 2013}
+\lfoot{\emph{Math and Decision Making}}
+\cfoot{}
+\rfoot{\emph{\thepage\ of \pageref{LastPage}}}
+
+\section*{Introduction}
+In this assignment, you will learn about \emph{subsets}. This will give us flexibility to build many new examples and describe them carefully. Also, you will learn about a special  construction, the \emph{power set} of a set.
+
+\section*{Goals}
+At the end of this assignment, a student should be able to:
+\begin{compactitem}
+\item Describe clearly the meaning of the word subset.
+\item Decide if one set is, or is not, a subset of another.
+\item Model some counting problems using the language of subsets.
+\end{compactitem}
+A student might also be able to:
+\begin{compactitem}
+\item Show that some counting problems involving subsets are very similar.
+\end{compactitem}
+
+\section*{Reading and Questions for 7 October}
+
+\subsection*{The Notion of a Subset}
+Suppose you have a crowd of $50$ people, and from that crowd you must choose two people to be representatives for a mission to Mars. 
+How many ways can you make such a choice? 
+The number is rather large, but for now we do not care what it is. 
+More important to us is the structure of what is going on.
+
+Initially, you have a set of $50$ people like this:
+\[
+C = \{ \text{Jane}, \text{Joe}, \text{Jessica}, \text{Jeremey}, \ldots, \text{Jennifer} \}.
+\]
+(Recall that the ellipsis, that is the three periods in a row, indicates that some elements are missing from the description.)
+A choice of a pair of people to go to Mars is the a set like $\{ \text{Jane}, \text{Joe} \}$ or $\{\text{Jeremey}, \text{Jennifer} \}$. 
+Each of those things is a \emph{subset} of the original set $C$.
+What does this mean?
+
+\begin{definition} Let $S$ be a set. Another set $R$ is called a \emph{subset} of $S$ when for each element of $R$, that thing is also an element of $S$.
+\end{definition}
+
+Why is $\{ \text{Jane}, \text{Joe}\}$ a subset of $C$?
+Just check!
+The elements of $\{ \text{Jane}, \text{Joe} \}$ are $\text{Jane}$ and $\text{Joe}$. Each of these is an element of $C$, also. Therefore, by the definition above, $\{ \text{Jane}, \text{Joe}\}$ is a subset of $C$.
+
+\begin{exercise}
+Give two other examples of subsets of $C$ and describe how you know they are subsets.
+\end{exercise}
+
+\begin{exercise}
+Find two more subsets of $C$, this time one of your subsets should have less than two elements, and one should have more than two elements.
+\end{exercise}
+
+\subsection*{Some Exercises}
+
+\begin{exercise}
+Consider the set $X = \{A, 3, \{1\} \}$.
+List as many subsets of $X$ as you can.
+(There are eight of these. How many can you find?)
+\end{exercise}
+
+That last exercise is tricky.
+We will come back to count all of the subsets in just a bit.
+
+\begin{exercise}
+Let $T = \{1, 2\}$ and $J = \{1, 3\}$ be two sets.
+Use the definition to write some sentences that explain why $T$ is not a subset of $J$ and $J$ is not a subset of $T$.
+\end{exercise}
+
+Constructions of subsets allows us great flexibility but it is important to be careful. For the next few exercises, we will work with the set $G$,
+\[
+G = \{ \{1, 2\}, \{3, 7\}, \{1, 3\} \}.
+\]
+
+\begin{exercise}
+Use the definition of subset to explain why $H = \{ \{1,2\}, \{1, 3\} \}$ is a subset of $G$.
+\end{exercise}
+
+\begin{exercise}
+Use the definition of subset to explain why $K = \{ 1, 2, 3\}$ and $B = \{ 7\}$ are not subsets of $G$.
+\end{exercise}
+
+\subsection*{Oddities of Subsets}
+
+Mathematicians have found it useful to make some conventions that seem odd to the newcomer.
+
+\subsubsection*{The Empty Set}
+First, there is a special set called the \emph{empty set}. 
+This is the set that \emph{has no elements}! 
+The standard way to write this is with this symbol $\emptyset$, but really that is just shorthand for $\{ \quad \}$. 
+
+The goofiest thing about the empty set is that it is a subset of \underline{every} other set.
+Why?
+Think about the definition: for each element of $\emptyset$ we need something to be true.
+But there are no elements of $\emptyset$.
+So we get that whatever we need is true because there is nothing to check.
+
+\subsubsection*{The Whole Subset}
+Suppose you have some set $S$.
+If you work through the definition of the word subset, you can see that $S$ is a subset of itself.
+This is a bit weird because our intuition usually says that a subset should be something smaller than the original.
+But this is the way the definition works. Any set is a subset of itself.
+
+\begin{exercise}
+Go back to the exercise about finding all of the subsets of $X = \{A, 3, \{1\} \}$.
+Can you find all eight of them now?
+\end{exercise}
+
+\subsubsection*{The Power Set of a Set}
+Collecting subsets together allows us to make an important construction.
+\begin{definition}
+Let $S$ be a set. The \emph{power set of} $S$ is the set whose elements are all of the subsets of $S$.
+\end{definition}
+
+The power set is usually denoted by $\mathcal{P}$. So, in set builder notation, this definition looks like this:
+\[
+\mathcal{P}(S) = \{ X \mid \text{$X$ is a subset of $S$} \}
+\]
+
+Here we have extended the set-builder notation scheme. Inside the curly braces, you find a description with some name in it (here it is $X$), then a vertical bar, and then a description of the rule one uses to decide if the name belongs to the set or not.
+
+\begin{exercise}
+Let $F = \{1, 2, 3, 4\}$ be a set.
+Describe the power set $\mathcal{P}(F)$ of $F$ by writing down all of its elements.
+Note that there are sixteen of them.
+\end{exercise}
+
+\subsection*{Challenges}
+
+Here are some tasks that will help you practice common things we will want to do with subsets.
+
+\begin{challenge}
+In a city of $4000$ people, we are to choose some to get shiny gold medals with pictures of Prof.~Hitchman's distinguished face on one side, and the number 403 on the other.
+We want to pick three special people to get medals.
+\begin{enumerate}
+\item[(a)] Make a definition of a set $T$ so that its elements represent possible choices of three people to \emph{get} medals.
+You should use the word ``subset'' somehow.
+\item[(b)] Make a definition of a set $J$ so that its elements represent possible choices of people to \emph{not} get medals.
+You should use  the word ``subset'' somehow.
+\item[(c)] [Extra challenge] How can we see that $T$ and $J$ have the same number of elements without counting?
+\end{enumerate}
+\end{challenge}
+
+\begin{challenge}
+Let $\mathbb{N}$ be the set of natural numbers, and let $\mathcal{E}$ be the set of all even natural numbers.
+\[
+\mathbb{N} = \{1, 2, 3, 4, \ldots \}, \qquad \mathcal{E} = \{2, 4, 6, 8, \ldots \}
+\]
+Use the definition of subset to check that $\mathcal{E}$ is a subset of $\mathbb{N}$, but $\mathbb{N}$ is not a subset of $\mathcal{E}$. 
+
+Which of these sets is bigger? 
+\end{challenge}
+
+
+%\begin{thebibliography}{9}
+%\end{thebibliography}
+
+\end{document}
+%sagemathcloud={"zoom_width":100}
