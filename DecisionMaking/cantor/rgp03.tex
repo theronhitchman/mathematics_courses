@@ -33,28 +33,115 @@
 %Paramètres relatifs aux en-têtes et pieds de page.
 \pagestyle{fancy}
 \lhead{Theron J Hitchman}
-\chead{\Large Reading and Guided Practice \#}
+\chead{\Large Reading and Guided Practice \#3}
 \rhead{Fall 2013}
 \lfoot{\emph{Math and Decision Making}}
 \cfoot{}
 \rfoot{\emph{\thepage\ of \pageref{LastPage}}}
 
 \section*{Introduction}
-
+In this reading, we learn about the idea of a matching. 
+This is a way to compare the sizes of two sets without actually counting them.
 
 \section*{Goals}
 At the end of this assignment, a student should be able to:
 \begin{compactitem}
-\item 
-\item 
-\item 
+\item Describe the idea of a matching between two sets.
+\item Use the idea of a matching between two finite sets to show that those sets have the same number of elements.
+\item recognize a common pitfall in constructing matchings.
 \end{compactitem}
 A student might also be able to:
 \begin{compactitem}
-\item 
+\item Solve a challenging problem using a matching between sets.
 \end{compactitem}
 
-\section*{Reading and Questions for }
+\section*{Reading and Questions for 9 October}
+
+Mathematicians want to understand the relative sizes of very large sets.
+But it can be difficult to count the number of elements of a large set.
+Worse, it could be inconvenient.
+But there is a way to keep track of the idea of two sets ``having the same size'' without actually knowing what the size is!
+This is our goal for today.
+
+\subsection*{The Idea of a Matching: A Parable?}
+Have you ever tried counting to a big number really fast?
+It gets challenging as the words pile up. 
+\emph{One hundred seventy-seven} is a lot of syllables.
+
+Imagine a shepherd with a large flock.
+The sheep move in and out of the pen a bit too fast for him to count, as the words describing the numbers get to be a mouthful. 
+Instead, he gets a bag of pebbles and makes sure he has one pebble for each sheep. 
+How many pebbles is it?
+It doesn't matter.
+What matters is that he can match them up with the sheep.
+Each morning, he moves one pebble for each sheep that passes out of the gate into a second bag.
+If the last sheep goes out as the last pebble switches bags, he has seen them all.
+This can be repeated in the evening. 
+If the last sheep comes in as the last pebble changes from one bag to the other, then all of the sheep have come home.
+If the sheep and the pebbles do not match, he knows if any sheep are missing, or if there is somehow a new addition to the flock.
+
+This is the idea of a matching.
+In this case, the flock of sheep is one set (whose elements are the individual sheep), and the bag of pebbles is the other set (whose elements are the individual pebbles).
+Each morning and each evening, the farmer is observing a matching between the elements of these two sets.
+
+\begin{definition}
+Let $A$ and $B$ be two sets. A \emph{matching between the elements of $A$ and the elements of $B$} is a way to associate to each element of $A$ exactly one element of $B$, so that no elements of either set are left unpaired.
+\end{definition}
+
+\begin{example}
+Let $A$ be the set of fingers on your right hand. 
+Let $B$ be the set of fingers on your left hand. 
+It is usually the case that these two sets have the same size. 
+The most common matching between the elements of $A$ and the elements of $B$ is made by pressing your fingertips together like Mr. Burns from \emph{The Simpsons}. 
+\textbf{Excellent!}
+\end{example}
+
+\begin{exercise}
+Let $T$ be the set of all arrangements of the letters $ABCDEFGHIJ$.
+Let $J$ be the set of all arrangements of the letters $KLMNOPQRST$.
+First, be sure to figure out what counts as an element of $T$ and what counts as an element of $J$.
+(Sanity Check: There are lots of elements of both sets.
+Way more than 100.)
+
+Find a matching between the elements of $T$ and the elements of $J$.
+Use this to describe how you know that these two sets have the same size, even though you don't know what that size is.
+\end{exercise}
+
+
+\begin{exercise}
+Let $T = \{ 1, 4, 7, 10, 13, \ldots, 3001\}$.
+Let $J = \{ 2, 5, 8, 11, 14, \ldots, 3002\}$.
+Describe a matching between the elements of $T$ and the elements of $J$.
+
+As a check: can you see why these two sets both have $1001$ elements?
+\end{exercise}
+
+\subsection*{One Common Pitfall}
+
+Even after you get the basic idea of a matching, it pays to be careful. 
+There are a few common mistakes one can make. 
+One of them is encapsulated in the next exercise.
+
+\begin{exercise}
+My friend Penny is very young, and is still learning to count.
+When she first tried it, she often counted things like this:
+\begin{quote}
+One, Three, Four, Five, Eight, \dots
+\end{quote}
+What is the nature of Penny's mistake?
+
+Can you use the language of matchings to say exactly what Penny's mistake is?
+\end{exercise}
+
+\subsection*{A Challenge}
+
+\begin{challenge}
+Horror of horrors, you are in charge of every third grader in Cedar Falls for an afternoon.
+Fortunately, you have them all trapped in the UNI-Dome.
+They are all running around on the field shouting, "Look at me! I'm a vampire unicorn!"
+
+Quick, without counting, come up with a way to decide if there are more boys, more girls, or the same number of each.
+\end{challenge}
 
 %\begin{thebibliography}{9}
 %\end{thebibliography}
