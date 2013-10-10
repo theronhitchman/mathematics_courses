@@ -1,0 +1,169 @@
+\documentclass[12pt,letterpaper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm,headheight=22pt]{geometry}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{lastpage}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{paralist}
+\usepackage{url}
+
+\theoremstyle{definition}
+\newtheorem{question}{Question}
+\newtheorem{example}{Example}
+\newtheorem{exercise}[question]{Exercise}
+\newtheorem*{challenge}{Challenge}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{definition}{Definition}
+
+\begin{document}
+
+%Paramètres de mise en forme des paragraphes selon les normes françaises
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+\setlength{\parindent}{0pt}
+
+%Paramètres relatifs aux en-têtes et pieds de page.
+\pagestyle{fancy}
+\lhead{Theron J Hitchman}
+\chead{\Large Reading and Guided Practice \#4}
+\rhead{Fall 2013}
+\lfoot{\emph{Math and Decision Making}}
+\cfoot{}
+\rfoot{\emph{\thepage\ of \pageref{LastPage}}}
+
+\section*{Introduction}
+This assignment is a further discussion of the idea of a matching.
+We examine other common pitfalls encountered when making matchings, and how matchings can be used to make comparisons.
+
+\section*{Goals}
+At the end of this assignment, a student should be able to:
+\begin{compactitem}
+\item Describe the idea of a matching clearly in plain language.
+\item Describe two common mistakes made when making matchings.
+\item Use the idea of a matching to make comparisons between the sizes of sets.
+\item Construct matchings between sets.
+\end{compactitem}
+
+
+\section*{Reading and Questions for 11 October}
+
+Let us continue our examination of the idea of a matching between the elements of two sets.
+
+\subsection*{The definition of a Matching.}
+In the last reading, we learned an official definition of a matching between the elements of two sets.
+It looks like this:
+\begin{definition}
+Let $A$ and $B$ be two sets.
+A \emph{matching between the elements of $A$ and the elements of $B$} is a way to associate to each element of $A$ exactly one element of $B$, so that no elements of either set are left unpaired.
+\end{definition}
+
+A tricky thing here is that the matching is \emph{the association}.
+Another way to describe this is that a matching is a \emph{rule for assignment}: for each element $a$ of the set $A$, the rule tells us how to find an particular element $b$ of the set $B$.
+These two elements $a$ and $b$ are then paired together.
+The part of the definition which says that for each member $a$ of the set $A$ there must be exactly one associated member $b$ of $B$, and vice versa, expresses the idea of a \emph{one to one correspondence.}
+
+\begin{example}
+Let $T = \{ 1, 4, 7, 10, 13, \ldots, 3001\}$.
+Let $J = \{ 2, 5, 8, 11, 14, \ldots, 3002\}$.
+We now describe a matching between the elements of $T$ and the elements of $J$.
+
+Given an element of $T$, we can associate to it the element of $J$ which is one greater. 
+If you want, you can describe this with algebraic symbols like this: 
+\begin{quote}
+To each element $x$ of $T$ we associate the element $x+1$ of $J$.
+\end{quote}
+But, really, all we are doing is specifying the following rule for assignment. If you give me an element of $T$, I find the associated element of $J$ by \textbf{adding one}.
+
+Note that this rule is completely reversible.
+If we start with an element of $J$, we can find the associated element of $T$ by \textbf{subtracting one}.
+This is the way that a matching between elements is just a rule for assignment.
+We give the instructions for how to find each elment's pair-partner in the other set.
+\end{example}
+
+
+\begin{exercise}
+Explain in sentences how you can be sure that this matching between the elements of $T$ and the elements of $J$ are in a one to one correspondence.
+\end{exercise}
+
+\subsection*{Common Mistakes}
+
+Think about counting. 
+Counting is a form of making a matching between those things you wish to count and some subset of the natural numbers.
+In particular, to count a collection of things is the same as making a matching of those things with some ``initial subset'' of $\mathbb{N}$. 
+When counting a baby's toes (certainly one of the most fun things you can do), you are really making a matching between the set $\{ \text{toes on this baby} \}$ and the set $\{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\}$.
+
+In the last reading, we described a common error in the business of making matchings.
+\begin{example}
+My friend Penny is very young, and is still learning to count.
+When she first tried it, she often counted things like this:
+\begin{quote}
+One, Three, Four, Five, Eight, \dots
+\end{quote}
+Penny's mistake is that she is skipping over some numbers. 
+Thus the construction of a matching between what ever she is counting and the set of natural numbers is faulty.
+There will be relevant natural numbers which don't have pair-partners! 
+Essentially, nothing gets labeled "two," so the matching is doomed.
+\end{example}
+
+\begin{exercise}
+My little friend Penny no longer makes that mistake of skipping numbers.
+Instead, she makes a different mistake.
+Now she counts like this:
+\begin{quote}
+One, two, three, four, five, six, seven, eight, nine, ten, eleven, eight, nine, ten, eleven, eight, nine, ten, eleven, \dots
+\end{quote}
+(It can go on like this for a long time. You get the idea.)
+What is the nature of Penny's second mistake?
+
+Use the language of matchings between elements to describe what is going wrong.
+\end{exercise}
+
+\subsection*{Making Comparisons}
+
+An important feature of having a matching between the elements of one set and the elements of another set is that it means that in a strict sense those two sets have the same size. 
+This is nice, because it gives us a way to say things are "the same" directly, without having to go through the intermediate step of counting those sets. 
+(Counting really large sets is often inconvenient.)
+
+
+Often, the ways in which we fail when attempting to make matchings can give us clues to the relative sizes of two sets.
+The precise way in which we cannot produce a one to one correspondence might tell us which of the two sets is bigger!
+
+For example, In class we saw that the set $C$ of chairs in the classroom had more elements than the set $S$ of students. 
+We observed this because having everyone sit down was a form of attempting to make a matching between the elements of $S$ and the elements of $C$. 
+Each student (an element of $S$) associated himself or herself with a chair (an element of $C$) by sitting in it. 
+That is a rule for the assignment!
+
+\begin{exercise}
+Which of two of Penny's mistakes are made in trying to form this matching?
+\end{exercise}
+
+\begin{exercise}
+Suppose that somehow our assignment of students to chairs failed to be a matching because it made the other mistake Penny taught us about.
+What would be happening, physically, with students and chairs?
+\end{exercise}
+
+\begin{exercise}
+Suppose that we have two sets where $A$ is definitely larger than $B$.
+Why is it impossible to make a matching by coming up with a rule of association that starts with elements of $A$ and produces elements of $B$?
+\end{exercise}
+
+\begin{exercise}
+Suppose that we have two sets where $A$ is definitely larger than $B$.
+Why is it impossible to make a matching by coming up with a rule of association that starts with elements of $B$ and produces elements of $A$?
+\end{exercise}
+
+
+
+%\begin{thebibliography}{9}
+%\end{thebibliography}
+
+\end{document}
+%sagemathcloud={"zoom_width":100}
