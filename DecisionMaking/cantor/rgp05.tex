@@ -1,0 +1,188 @@
+\documentclass[12pt,letterpaper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm,headheight=22pt]{geometry}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{lastpage}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{paralist}
+\usepackage{url}
+
+\theoremstyle{definition}
+\newtheorem{question}{Question}
+\newtheorem{example}{Example}
+\newtheorem{exercise}[question]{Exercise}
+\newtheorem*{challenge}{Challenge}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{definition}{Definition}
+\newtheorem{observation}{Observation}
+
+\begin{document}
+
+%Paramètres de mise en forme des paragraphes selon les normes françaises
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+\setlength{\parindent}{0pt}
+
+%Paramètres relatifs aux en-têtes et pieds de page.
+\pagestyle{fancy}
+\lhead{Theron J Hitchman}
+\chead{\Large Reading and Guided Practice \#5}
+\rhead{Fall 2013}
+\lfoot{\emph{Math and Decision Making}}
+\cfoot{}
+\rfoot{\emph{\thepage\ of \pageref{LastPage}}}
+
+\section*{Introduction}
+In this reading we reassess the idea of counting and compare it to our idea of matching.
+
+\section*{Goals}
+At the end of this assignment, a student should be able to:
+\begin{compactitem}
+\item Explain how counting is making a matching with some initial segment of the natural numbers.
+\item Explain how counting compares with making a list.
+\item Explain the importance of the order given to the elements of the list.
+\end{compactitem}
+A student might also be able to:
+\begin{compactitem}
+\item Solve some challenging problems about counting by using lists appropriately.
+\end{compactitem}
+
+\section*{Reading and Questions for 14 October}
+
+So far, we have tried to learn to compare the sizes of sets \emph{without} actually counting them.
+The idea of comparing sets by attempting to match them up is an old and powerful one, but of course it is not the only one.
+Let us revisit the idea of counting with a fresh perspective.
+
+\subsection*{A New Look at Counting}
+
+Begin with the following simple exercise.
+Pay attention to \emph{how} you solve it.
+\begin{exercise}
+Consider the set $C = \{ \pi, e, 7, 22, 948, 51, 403\}$.
+How many elements does $C$ have?
+\end{exercise}
+
+\vspace{.5in}
+
+What did you do when you completed that exercise?
+I am sure you counted the elements.
+Did you touch each element of $C$ with a pencil while reciting the names of numbers in the proper order?
+Maybe you did not physically touch the elements, but instead just let your eye linger over each as you said the names of numbers in your head?
+\begin{quote}
+\emph{One, two, three, four, five, six, seven.}
+\end{quote}
+What you just did was to make a matching between the elements of $C$ and the set $\{1, 2, 3, 4, 5, 6, 7\}$.
+You are not accustomed to thinking of it that way, but that is what happened.
+
+This is how counting works!
+When we teach children to count, there are really two things happening.
+\begin{compactdesc}
+\item[(Obvious)] We help children commit to memory our standard scheme for naming numbers in a particular order.
+\item[(Not obvious)] We teach children the implicit process of making a matching between the collection of things to be counted and some properly chosen subset of the natural numbers.
+\end{compactdesc}
+
+The second part lies deeper in the process.
+Even though it is usually done implicitly, children pick it up at some point.
+I know a four year old who has the process picked up, she always makes matchings, now.
+But she has not, yet, mastered the scheme for naming numbers. 
+In a way this is reasonable, the naming scheme has some inherent order to it, but it really is arbitrary. 
+(For elementary school children a lot of instruction goes on about the place-value system which underlies the Hindu-Arabic numeral system we all use.)
+
+\begin{example}
+Have you ever played with a toddler?
+One fun and educational activity is to put the child on your lap and count the child's toes.
+This helps the child learn about the numbers \emph{one} through \emph{ten}, but also about the matching process.
+As you count, you touch the child's toes individually, and thus embody the matching.
+\end{example}
+
+From our more advanced perspective, what is happening?
+Recall that $\mathbb{N}$ denotes the set of natural numbers $\mathbb{N} =\{1, 2, 3, \ldots\}$.
+\begin{definition}
+Fix a natural number $n$. 
+The \emph{initial segement} of $\mathbb{N}$ of length $n$ is the set of all natural numbers $k$ which are no greater than $n$.
+We shall denote the initial segment of length $n$ by the symbol $\lfloor n \rfloor$.
+\end{definition}
+
+For example, the initial segment $\lfloor 10 \rfloor$ is the set
+\[
+\lfloor 10 \rfloor = \{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\}.
+\]
+
+\begin{observation}
+Counting the elements of a set $X$ is the same thing as making a matching between the elements of $X$ and the elements of some initial segment $\lfloor n \rfloor$ of the natural numbers.
+The number $n$ is what we usually call the number of elements of $X$.
+\end{observation}
+
+
+\subsection*{The Importance of Ordering}
+
+So, how can we use this to further our goals?
+The idea lies in this exercise:
+\begin{example}
+How many one letter mathematical words are there?
+
+More carefully, let $W_1$ be the set of all mathematical words on the usual alphabet of uppercase letters.
+How many elements does $W_1$ have?
+
+You probably know that there are $26$ letters. 
+But if you didn't know, you would make a list of all of the uppercase letters. 
+Out of habit, I bet you would put them in the usual order, too.
+\[
+W_1 = \{ A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z\}
+\]
+This particular list of elements, with its ordering, makes a matching of the elements of $W_1$ with the elements of $\lfloor 26 \rfloor$.
+
+The ordering is critical here!
+For example, what is the 16th element?
+It is $P$.
+This means that $P$ in $W_1$ is paired up with $16$ in $\lfloor 26 \rfloor$.
+\end{example}
+
+\begin{observation}
+Making a list of the elements of some set is exactly the same thing as constructing a matching between the elements of that set and some initial subset of the natural numbers.
+
+The matching rule is implicit in the list in the following way:
+\emph{The ordering of the elements of the list tells us how to match them with numbers.}
+The first element in the list gets matched with $1$, the second element in the list gets matched with $2$, and so on.
+\end{observation}
+
+Now, you try using this idea.
+\begin{exercise}
+Let $W_2$ be the set of all mathematical words with two letters chosen from the alphabet of uppercase letters.
+Find a way to make a list of all the elements of $W_2$. 
+Use your list to explain why there is a matching between the elements of $W_2$ and the elements of $\lfloor 676 \rfloor$.
+(Note that $676 = 26\times 26$.)
+\end{exercise}
+
+To recap, the key ideas are these:
+\begin{itemize}
+\item Counting is really an example of a matching process. You match the elements of the set you wish to count with some special subset of $\mathbb{N}$ called an initial segment.
+\item A matching with an initial segment of the natural numbers is the same thing as making a list of the elements, because the ordering of the list holds the matching rule.
+\end{itemize}
+
+\subsection*{Challenges}
+
+To keep sharp, think about how the ideas we have learned can help you solve these problems.
+
+\begin{exercise}
+Make a list that shows how the set of all arrangements of the digits $1$, $2$, $3$ and $4$ has a matching with the set $\lfloor 24 \rfloor$.
+\end{exercise}
+
+\begin{exercise}
+Let $Three = \{3, 6, 9, 12, 15, 18, \ldots\}$ be the set of all natural numbers which are multiples of $3$.
+Describe how there is a matching between the elements of $Three$ and the elements of $\mathbb{N}$ hiding in this description of $Three$.
+\end{exercise}
+
+%\begin{thebibliography}{9}
+%\end{thebibliography}
+
+\end{document}
+%sagemathcloud={"zoom_width":100}
