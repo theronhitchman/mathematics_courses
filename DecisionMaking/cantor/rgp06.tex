@@ -1,0 +1,161 @@
+\documentclass[12pt,letterpaper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm,headheight=22pt]{geometry}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{lastpage}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{paralist}
+\usepackage{url}
+
+\theoremstyle{definition}
+\newtheorem{question}{Question}
+\newtheorem{example}{Example}
+\newtheorem{exercise}[question]{Exercise}
+\newtheorem*{challenge}{Challenge}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{definition}{Definition}
+
+\begin{document}
+
+%Paramètres de mise en forme des paragraphes selon les normes françaises
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+\setlength{\parindent}{0pt}
+
+%Paramètres relatifs aux en-têtes et pieds de page.
+\pagestyle{fancy}
+\lhead{Theron J Hitchman}
+\chead{\Large Reading and Guided Practice \#6}
+\rhead{Fall 2013}
+\lfoot{\emph{Math and Decision Making}}
+\cfoot{}
+\rfoot{\emph{\thepage\ of \pageref{LastPage}}}
+
+\section*{Introduction}
+In this reading, we make precise the difference between finite and infinite sets.
+
+\section*{Goals}
+At the end of this assignment, a student should be able to:
+\begin{compactitem}
+\item State clearly what it means for a set to be finite.
+\item State clearly what it means for a set to be infinite.
+\item State clearly what it means for a set to countably infinite.
+\end{compactitem}
+
+
+\section*{Reading and Questions for 16 October}
+
+Now that we have some comfort with comparing sets via matching elements, and with counting, it is time to make distinctions between sets which are merely big and those which are \emph{big}.
+
+\subsection*{Finite Sets}
+
+What does it mean for a set to be finite?
+At some intuitive level, it means that we can start listing all of them, and at some point that list will stop as we have considered everything in the set. 
+This can be made precise with the following definition.
+\begin{definition}
+Let $S$ be a set. We say that $S$ is a \emph{finite} set when there is some natural number $n$, and a matching between the elements of $S$ and the elements of the initial segment $\lfloor n \rfloor$ of the natural numbers.
+\end{definition}
+
+\begin{example}
+Let $X = \{ 0, 1\}$.
+The power set of $X$, $\mathcal{P}(X)$ is finite.
+To see this, we make a list of the elements of $\mathcal{P}(X)$ as follows:
+\[
+\mathcal{P}(X) = \{ \emptyset, \{0\}, \{1\}, X \} .
+\]
+The ordering of this list makes an implicit matching with the initial segment $\lfloor 4 \rfloor = \{ 1,  2, 3, 4\}$ of the natural numbers. 
+\end{example}
+
+\begin{exercise}
+Let $Y = \{ 0, 1, 2 \}$. 
+Show that the power set $\mathcal{P}(Y)$ of $Y$ is a finite set.
+\end{exercise}
+
+Most sets that people encounter in everyday life are finite.
+Even if they are really big, they are still somehow understandable as just a list of things. 
+Of course humans are not generally good at understanding the true nature of large numbers.
+It is very difficult to get an accurate impression of how much bigger the number $1000000000000$ is than the number $1000$. 
+
+\subsection*{Infinite Sets}
+
+The word \emph{infinite} is the opposite of \emph{finite}. 
+It literally means ``not finite.'' 
+So if we invert the definition above we get this:
+\begin{definition}
+Let $S$ be a set. Assume that $S$ is not the empty set.
+We say that $S$ is an \emph{infinite} set when it is impossible to choose a natural number $n$ and a matching between the elements of $S$ and the elements of the initial segment $\lfloor n \rfloor$.
+\end{definition}
+That definition is a bit harder to use.
+First, it is harder to read.
+But read it a couple of times and it will sink in.
+Second, it states an \emph{impossiblity} rather than a \emph{possibility} as the condition to check. 
+That is much harder to deal with.
+
+Fortunately, we have this theorem which makes our life easier.
+\begin{theorem}
+Let $S$ be a set. Then $S$ is infinite if, and only if, there is a subset $T$ of $S$ such that one can make a matching between the elements of $T$ and the elements of $N$.
+\end{theorem}
+
+How does this help?
+Well, it gives us something positive to check.
+Instead of having to check a statement like "there is no such thing as a\dots", we can check a statement like "it is possible to make\dots"
+
+Note that the theorem has the special words ``if, and only if'' in it. 
+This is mathematician's code for \emph{these two statements are equivalent.} 
+So if we have one, then we have the other, and vice versa.
+
+I won't give a formal proof of the theorem, because it is a bit ugly.
+The basic idea is to consider lists of elements of $S$. Just start making such a list and see what happens. If your set is not finite, then any list \emph{has to keep going on forever}, because a list which stops is exactly our definition of the word finite.
+
+And in the other direction, if you have a list of the elements of $T$ which goes on forever, then clearly no list which stops will be good enough to match all of those elements. 
+When you try to make the matching between elements of some initial subset $\lfloor K \rfloor$ of the natural numbers and the elements of $T$, you will necessarily miss a lot of them.
+
+\begin{example}
+The set $\mathcal{W}$ of all mathematical words of any length is an infinite set.
+
+To see this, consider the special subset $\mathcal{W}_A$ consisting of all of those words whose only letter is $A$.
+We may list the elements of $\mathcal{W}_A$ as follows
+\[
+\mathcal{W}_A = \{ A, AA, AAA, AAAA, AAAAA, AAAAAA, \ldots \}
+\]
+This list makes a matching with the set $\mathbb{N}$ of natural numbers. 
+We conclude that $\mathcal{W}_A$ is infinite.
+\end{example}
+
+\begin{exercise}
+The set of \emph{integers} is the set consisting of all of the natural numbers, their negatives and zero. A common notation for this set is the letter $\mathbb{Z}$.
+\[ 
+\mathbb{Z} = \{ \ldots , -2, -1, 0, 1, 2, 3, \dots \}.
+\]
+Give an argument for why this set is infinite by using the theorem above.
+\end{exercise}
+
+\subsection*{Countably Infinite Sets}
+
+There is a special collection of infinite sets that have the property of being exactly the same size as the natural numbers.
+Such sets are called countably infinite sets.
+\begin{definition}
+A set $X$ is called \emph{countably infinite} when there exists a matching between the elements of $X$ and the elements of $\mathbb{N}$.
+\end{definition}
+
+We have previously encountered the set $\mathcal{E}$ of even natural numbers, and the set $\mathcal{O}$ of odd naturnal numbers.
+Each of those sets is countably infinite.
+
+\begin{exercise}
+Show that the set of all natural numbers which are evenly divisible by four is countably infinite.
+\end{exercise}
+
+
+%\begin{thebibliography}{9}
+%\end{thebibliography}
+
+\end{document}
+%sagemathcloud={"zoom_width":100}
