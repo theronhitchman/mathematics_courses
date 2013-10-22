@@ -1,0 +1,179 @@
+\documentclass[12pt,letterpaper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm,headheight=22pt]{geometry}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{lastpage}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{paralist}
+\usepackage{url}
+
+\theoremstyle{definition}
+\newtheorem{question}{Question}
+\newtheorem{example}{Example}
+\newtheorem{exercise}[question]{Exercise}
+\newtheorem*{challenge}{Challenge}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{definition}{Definition}
+
+\begin{document}
+
+%Paramètres de mise en forme des paragraphes selon les normes françaises
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+\setlength{\parindent}{0pt}
+
+%Paramètres relatifs aux en-têtes et pieds de page.
+\pagestyle{fancy}
+\lhead{Theron J Hitchman}
+\chead{\Large Reading and Guided Practice \#8}
+\rhead{Fall 2013}
+\lfoot{\emph{Math and Decision Making}}
+\cfoot{}
+\rfoot{\emph{\thepage\ of \pageref{LastPage}}}
+
+\section*{Introduction}
+We reacquaint ourselves with old friends, the \emph{rational numbers}.
+
+\section*{Goals}
+At the end of this assignment, a student should be able to:
+\begin{compactitem}
+\item Describe clearly what a rational number is.
+\item Recognize when two rational numbers are equal.
+\item Recognize when one rational number is greater than another.
+\item Discuss the ordering of rational numbers, and how it differs from the ordering of the natural numbers.
+\end{compactitem}
+A student might also be able to:
+\begin{compactitem}
+\item Show that the set of rational numbers is an infinite set.
+\end{compactitem}
+
+\section*{Reading and Questions for 23 October}
+
+Recall that we have encountered the set of \emph{natural numbers}
+\[
+\mathbb{N} = \{1, 2, 3, 4, \ldots\}
+\]
+and the set of \emph{integers}
+\[
+\mathbb{Z} = \{ \ldots, -3, -2, -1, 0, 1, 2, 3, \ldots\}.
+\]
+Now we will introduce a new kind of number and consider the set of all of them.
+
+A \emph{rational number} is one of the form $a/b$ where $a$ is any integer and $b$ is any natural number. 
+For example, $-4/7$ comes from choosing $a = -7$ from $\mathbb{Z}$ and $b= 7$ from $\mathbb{N}$.
+
+\begin{exercise}
+Make three more examples of rational numbers and say what the choices of $a$ and $b$ are.
+\end{exercise}
+
+The collection of all rational numbers is denoted $\mathbb{Q}$. 
+(Here the funny Q is for ``quotient,'' since we make rational numbers by making a quotient of $a$ by $b$.)
+
+The first interesting thing to work out about rational numbers is that some of them are equal without it being immediately obvious!
+For example, $1/2$ is really the same thing as $2/4$.
+Typically, these are called \emph{equivalent} rational numbers. 
+
+\begin{definition} Two rational numbers $a/b$ and $a'/b'$ are \emph{equivalent} exactly when 
+$ab' = a'b$.
+\end{definition}
+Note the multiplication is just ordinary multiplication of integers like in grade school.
+
+
+\begin{exercise}
+List three pairs of equivalent rational numbers.
+\end{exercise}
+
+\begin{exercise}
+List three pairs of inequivalent numbers.
+\end{exercise}
+
+\subsection*{Comparing Rational Numbers}
+
+One nice thing about the natural numbers is that we can arrange them in a line.
+Like an infinite line of telephone poles along the highway, they march off away from you, going on forever.
+And between each natural number and the next is a gap.
+In fact, that gap is what makes it meaningful to say ``the next natural number.''
+
+Things are more challening for the rational numbers.
+First, can we even order them on a line?
+Yes. 
+Like so.
+
+\begin{definition}
+We say that the rational number $a/b$ is \emph{larger} than the rational number $c/d$ when 
+\[
+a \cdot d > c \cdot b.
+\]
+\end{definition}
+
+\begin{exercise}
+Find an example of rational numbers $a/b$ and $c/d$ where $a/b$ is larger than $c/d$.
+\end{exercise}
+
+\begin{exercise}
+Find an example of rational numbers $a/b$ and $c/d$ where $a/b$ is smaller than $c/d$.
+\end{exercise}
+
+\begin{exercise}
+Place all of the rational numbers you have found so far on a number line showing their relative sizes.
+\end{exercise}
+
+\begin{exercise}
+Explain why the following is true:
+\begin{quote}
+For each pair of rational numbers $a/b$ and $c/d$, either $a/b$ is larger than $c/d$, or $a/b$ is equivalent to $c/d$, or $a/b$ is smaller than $c/d$.
+\end{quote}
+\end{exercise}
+
+\subsection*{Density of the Rational Numbers}
+
+So we see that both the rational numbers and the natural numbers can be placed along a line.
+How are things really different for the rational numbers?
+Well, they keep popping up in different places.
+
+\begin{exercise}
+Find a rational number which is larger than $1/2$ and smaller than $3/4$.
+\end{exercise}
+
+
+\begin{exercise}
+Find a rational number which is larger than $1/2$ and smaller than $6/11$.
+\end{exercise}
+
+\begin{exercise}
+Find a rational number which is larger than $5/51$ and smaller than $93/175$.
+\end{exercise}
+
+\begin{exercise}
+Suppose you are given a pair of rational numbers $a/b$ and $c/d$.
+That is, you know they are rational numbers, but you do not know exactly what they are.
+We assume that $a/b$ is smaller than $c/d$. 
+
+Show how to find a rational number $x/y$ so that $x/y$ is larger than $a/b$ and smaller than $c/d$.
+\end{exercise}
+
+\subsection*{Challenges}
+
+\begin{challenge}
+Use the definition of \emph{infinite set} to prove that the set $\mathbb{Q}$ of rational numbers is an infinite set.
+\end{challenge}
+
+\begin{challenge}
+Repeat the last exercise, but use a \emph{different subset} of $\mathbb{Q}$ to help you do the job.
+\end{challenge}
+
+
+
+%\begin{thebibliography}{9}
+%\end{thebibliography}
+
+\end{document}
+%sagemathcloud={"zoom_width":100}
