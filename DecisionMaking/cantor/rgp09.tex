@@ -1,0 +1,235 @@
+\documentclass[12pt,letterpaper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm,headheight=22pt]{geometry}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{lastpage}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{paralist}
+\usepackage{url}
+
+\theoremstyle{definition}
+\newtheorem{question}{Question}
+\newtheorem{example}{Example}
+\newtheorem{exercise}[question]{Exercise}
+\newtheorem*{challenge}{Challenge}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{definition}{Definition}
+
+\begin{document}
+
+%Paramètres de mise en forme des paragraphes selon les normes françaises
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+\setlength{\parindent}{0pt}
+
+%Paramètres relatifs aux en-têtes et pieds de page.
+\pagestyle{fancy}
+\lhead{Theron J Hitchman}
+\chead{\Large Reading and Guided Practice \#9}
+\rhead{Fall 2013}
+\lfoot{\emph{Math and Decision Making}}
+\cfoot{}
+\rfoot{\emph{\thepage\ of \pageref{LastPage}}}
+
+\section*{Introduction}
+In this reading, we explore the existence of numbers which are not rational numbers.
+We also introduce the idea of a ``proof by contradiction.''
+
+\section*{Goals}
+At the end of this assignment, a student should be able to:
+\begin{compactitem}
+\item Explain why $\sqrt{2}$ is not a rational number.
+\item Explain what a proof by contradiction is.
+\end{compactitem}
+A student might also be able to:
+\begin{compactitem}
+\item Give an argument that $\sqrt{3}$ is not a rational number.
+\end{compactitem}
+
+\section*{Reading and Questions for 25 October}
+
+We have already encountered many different types of numbers in our study. 
+We have seen \emph{natural numbers}, \emph{integers}, and recently \emph{rational numbers}.
+There are a great many rational numbers, and they are very useful.
+These days, school children spend a lot of time learning about these kinds of numbers, what they might represent, and how to work with them.
+
+\subsection*{An Ancient Discovery}
+
+Of course, at one point in time, detailed knowledge of rational numbers was not so common. 
+To the ancient Greek culture mathematicians like Pythagoras and Euclid, dealing with these kinds of quantities was advanced mathematics.
+They thought of rational numbers as \emph{ratios}, especially ratios of geometric lengths.
+
+There is an old story, which may or may not be true, that the mystical cult of \emph{Pythagoreans} learned about a new kind of number, which was not expressable as a ratio. 
+Much of this group's worldview was built around the idea that ratios were of a singular importance, so this new knowledge was shocking and unsettling.
+So unsettling, that the gods drowned the man on a sea voyage. 
+You can find a synopsis of the story on Wikipedia\cite{wikipedia}.
+
+For some time, the negative feeling about these quantities remained.
+There is still some trace of the negativity in the modern names:
+numbers expressable as ratios are called \emph{rational numbers}, numbers which are not expressable as ratios are called \emph{irrational numbers}.
+
+What exactly did the ancient mathematician find?
+This poor soul learned that the diagonal of a square with side length equal to $1$ is not expressable as a ratio.
+These days, that length is called $\sqrt{2}$, and we instead say this:
+
+\begin{theorem}
+The number $\sqrt{2}$ is not a rational number.
+\end{theorem}
+
+\subsection*{A Preface on the Argument}
+
+We are going to look at the proof of that theorem.
+It is not necessary to be afraid of the word \emph{proof} here.
+All that we mean by the word \emph{proof} is that we are going to give a convincing argument about why the theorem is true.
+
+But in this case, the convincing argument has a clever technique in it.
+The argument is an example of a \emph{proof by contradiction}. 
+What happens is this:
+\begin{compactdesc}
+\item[Step 1:] We begin by assuming the theorem is \textbf{false}.
+\item[Step 2:] We use that assumption to argue that some other thing happens.
+\item[Step 3:] The trick is that the ``other thing'' has to be obviously wrong.
+\item[Step 4:] Since our assumption led us to something stupid, we conclude that our assumption must be incorrect.
+\item[Step 5:] Therefore our theorem must be true.
+\end{compactdesc}
+
+This is the logic behind a proof by contradiction.
+It can be easy to get things turned around a bit when you are new to this type of argument, because you have to assume negative things a lot.
+People who are used to this kind of argument spend all their time on Step 2, and they do not usually explain that the other steps are happening, too.
+But after a bit of practice, you will find this natural and all will be well.
+
+\begin{exercise}
+Have you ever seen a proof by contradiction before?
+Try to think of one or two situations where it has come up.
+\end{exercise}
+
+\begin{exercise}
+How is a proof by contradiction like a jury trial?
+(This is a weak analogy, but there is something to be learned here.)
+\end{exercise}
+
+\subsection*{Two Facts we need for the proof}
+To make the proof run, we need two facts which you likely already know.
+So that things are clearest, we state them right now up front as things you can and should believe.
+But so we do not get distracted, we will not give proofs of these statements.
+
+\subsubsection*{The Fundamental Theorem of Arithmetic}
+
+\begin{theorem}
+If $b$ is a natural number, then there is a unique way to write $b$ as a product of prime number factors.
+\end{theorem}
+
+There are actually two things happening here.
+First, every natural number can be written as a product of prime numbers.
+For example, $6=2\cdot 3$, and $100 = 2\cdot 2 \cdot 5 \cdot 5$.
+
+\begin{exercise}
+Write the number $204$ as a product of prime number factors.
+\end{exercise}
+
+Second, there is only one way to write a given number as a product of prime numbers.
+The only thing you can do is rearrange the list of primes so it reads in a different order.
+
+For example, the only interesting thing one can do with the expression for $6$ is reorder it like this: $6 = 3\cdot 2$.
+
+\subsubsection*{Rational Numbers in Lowest Terms}
+
+\begin{theorem}
+Every rational number $a/b$ can rewritten as an equivalent rational number $c/d$ where $c$ and $d$ have no common prime number factors.
+\end{theorem}
+
+The special representation $c/d$ is said to be in \emph{lowest terms.}
+
+\begin{example}
+Consider $93/39$.
+How may it be expressed in lowest terms?
+We factor the numerator and denominator and cancel common factors.
+\[
+\frac{93}{39} = \frac{3 \cdot 31}{3\cdot 13} = \frac{31}{13}
+\]
+The equivalent rational number $31/13$ is in lowest terms.
+\end{example}
+
+\begin{exercise}
+Find a rational number which is equivalent to $465/225$ and is in lowest terms.
+\end{exercise}
+
+\subsection*{Proof of the Theorem}
+
+By way of contradiction, assume that the theorem is false.
+That is, we assume that $\sqrt{2}$ is a rational number, and therefore expressable as one.
+This means that we can choose an integer $a$ and a natural number $b$ so that 
+\[
+\sqrt{2} = \frac{a}{b}.
+\]
+
+We shall make sure to clean things up and choose $a$ and $b$ so that the rational number $a/b$ is in lowest terms.
+\textbf{This means that $a$ and $b$ have no prime number factors in common.}
+
+Next, we will do a little algebra.
+We multiply through by $b$ to clear the fraction, and then we square both sides of the equation.
+Then we have this:
+\[ 
+2b^2 = a^2.
+\]
+
+Now think about the fact that the number on the right and the number on the left are equal.
+This means that the expressions of those numbers as products of prime number factors (from the Fundamental Theorem of Arithmetic) must be the same!
+
+From what we see on the left-hand side, it is clear that $2$ appears as a prime number factor in the list.
+Therefore, $2$ must be a prime number factor of the right-hand side, that is of $a^2$.
+But if $2$ is a prime divisor of $a^2$, it must be a prime number factor of $a$.
+From this we conclude that $4 = 2\cdot 2$ is a factor of $a^2$.
+
+Now we go back in the other direction.
+Since $4 = 2\cdot 2$ is a factor of $a^2$ it must be a factor of the left-hand side, too.
+But the left-hand side is $2 b^2$.
+So we must have that $2$ is a factor of $b^2$.
+But if $2$ is a prime number factor of $b^2$, it must be a prime number factor of $b$.
+
+\textbf{Therefore, $2$ is a prime number factor of $a$ and $2$ is a prime number factor of $b$.}
+
+This is an absurd situation.
+Our two bold statements contradict each other.
+Something must be wrong.
+
+What is wrong?
+\textit{Our initial assumption!}
+We conclude that $\sqrt{2}$ is not a rational number.
+
+
+\subsection*{Some Challenges}
+
+\begin{challenge}
+Adapt the argument above to prove that $\sqrt{3}$ is not a rational number.
+\end{challenge}
+
+\begin{challenge}
+Adapt the argument above to prove that $\sqrt{6}$ is not a rational number.
+\end{challenge}
+
+\begin{challenge}
+What happens when you try to adapt the argument to show that $\sqrt{4}$ is not a rational number?
+Where does the argument break?
+\end{challenge}
+
+
+\begin{thebibliography}{9}
+
+\bibitem{wikipedia}
+    Wikipedia Entry on Hippasus, 
+    \url{http://en.wikipedia.org/wiki/Hippasus},
+    accessed 24 October, 2013.
+
+\end{thebibliography}
+
+\end{document}
+%sagemathcloud={"zoom_width":100}
