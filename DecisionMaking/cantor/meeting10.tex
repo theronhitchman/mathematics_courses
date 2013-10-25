@@ -1,0 +1,91 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{cancel}
+
+\theoremstyle{definition}
+\newtheorem{task}{Task}
+\newtheorem*{untask}{Task}
+
+\begin{document}
+
+\begin{center}
+\textbf{\Huge
+Cantor's Paradise: Class Meeting \#10
+}
+\end{center}
+
+
+\vspace{.5in}
+
+Today, we study the set $\mathbb{Q}^+$ of all the positive rational numbers.
+ 
+\begin{task}
+Consider this table of fractions. Write a few sentences to explain why every element of $\mathbb{Q}^+$ appears on this table at least once.
+\begin{table}[htdp]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+1/1 & 2/1 & 3/1 & 4/1& 5/1 & 6/1& \dots \\
+\hline
+1/2 & 2/2 & 3/2 & 4/2 & 5/2 & 6/2& \dots \\
+\hline
+1/3 & 2/3 & 3/3 & 4/3 & 5/3 & 6/3& \dots \\
+\hline
+1/4 & 2/4 & 3/4 & 4/4 & 5/4 & 6/4& \dots \\
+\hline
+1/5 & 2/5 & 3/5 & 4/5 & 5/5 & 6/5& \dots \\
+\hline
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & $\ddots$ \\
+\hline
+\end{tabular}
+\end{center}
+\label{default}
+\caption{An Array of Positive Rational Numbers}
+\end{table}%
+\end{task}
+
+\vspace{2in}
+
+\begin{task} Now consider this list of numbers.
+\[
+\frac{1}{1}, \frac{2}{1}, \frac{1}{2}, \frac{3}{1}, \frac{2}{2}, \frac{1}{3}, \frac{4}{1}, \frac{3}{2}, \frac{2}{3}, \frac{1}{4}, \frac{5}{1}, \frac{4}{2}, \frac{3}{3}, \frac{2}{4}, \frac{1}{5}, \frac{6}{1}, \dots
+\]
+Write a few sentences to explain why every element of $\mathbb{Q}^+$ appears in this list at least once.\\
+\end{task}
+
+\clearpage
+
+\begin{task}
+Now we thin this sequence out by keeping only fractions in lowest terms and throwing out the others
+\[
+\frac{1}{1}, \frac{2}{1}, \frac{1}{2}, \frac{3}{1}, \cancel{\frac{2}{2}}, \frac{1}{3}, \frac{4}{1}, \frac{3}{2}, \frac{2}{3}, \frac{1}{4}, \frac{5}{1}, \cancel{\frac{4}{2}}, \cancel{\frac{3}{3}}, \cancel{\frac{2}{4}}, \frac{1}{5}, \frac{6}{1}, \dots
+\]
+to get
+\[
+\frac{1}{1}, \frac{2}{1}, \frac{1}{2}, \frac{3}{1}, \frac{1}{3}, \frac{4}{1}, \frac{3}{2}, \frac{2}{3}, \frac{1}{4}, \frac{5}{1}, \frac{1}{5}, \frac{6}{1}, \dots
+\]
+Write a few sentences to explain why every element of $\mathbb{Q}^+$ appears exactly once in the new list.\\
+\end{task}
+
+\vspace{2in}
+
+\begin{task}
+Write a few sentences to explain why $\mathbb{Q}^+$ is countably infinite.
+\end{task}
+
+\vspace{2in}
+
+\begin{task}
+Now explain why the set $\mathbb{Q}$ of all rational numbers is countable infinite.
+\end{task}
+
+\vspace{1.5in}
+
+\begin{untask}
+Contemplate how seriously weird that last result is.
+\end{untask}
+
+
+
+
+\end{document}
