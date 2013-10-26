@@ -40,16 +40,172 @@
 \rfoot{\emph{\thepage\ of \pageref{LastPage}}}
 
 \section*{Introduction}
-We have studied a lot of new material in the last two weeks. 
-Take some time to review it.
-Reread the reading and guided practice assignments 1 through 6 for this unit.
+We introduce the idea of a proof by contradiction.
+This is used to prove that the set of prime numbers is an infinite set.
 
 \section*{Goals}
-Become comfortable with the the work we have done so far. 
-Study and be sure of yourself.
-Can you use the new language we have developed?
-Can you fit the pieces of our study together to tell a little story?
-Can you see how each exercise is a part of a greater entity, meant to illuminate something specific, but not separate from the rest of the work?
+At the end of this assignment, a student should be able to:
+\begin{compactitem}
+\item State clearly what what a ``proof by contradiction'' is.
+\item Describe the logic behind a proof by contradiction.
+\item Explain why the set of all prime numbers is an infinite set.
+\end{compactitem}
+
+
+\section*{Reading and Guided Practice for 21}
+
+Mathematicians have known for a long time about \emph{prime numbers}.
+
+\begin{definition} 
+A natural number $p$ which is greater than $1$ is called a \emph{prime number} when its only divisors are $1$ and $p$.
+\end{definition}
+
+\begin{example}
+The first few prime numbers are 
+\[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, \ldots\]
+\end{example}
+
+What makes prime numbers so important?
+They are like little atoms for multiplication.
+They are the smallest indivisible pieces of natural numbers.
+
+Our goal today is to understand the argument for the following important fact, which has been known since at least the ancient Greek culture mathematicians. 
+(This work appears in Euclid's \emph{Elements}.)
+
+\begin{theorem}[The Infinitude of Primes]
+The set $\mathbb{P} = \{ p \mid \text{$p$ is a natural number and $p$ is prime} \}$ of all prime numbers is an infinite set.
+\end{theorem}
+
+\begin{exercise}
+What is the next largest prime number after $31$?
+\end{exercise}
+
+\subsection*{A Preface on the Argument}
+
+We are going to look at the proof of that theorem.
+It is not necessary to be afraid of the word \emph{proof} here.
+All that we mean by the word \emph{proof} is that we are going to give a convincing argument about why the theorem is true.
+
+But in this case, the convincing argument has a clever technique in it.
+The argument is an example of a \emph{proof by contradiction}. 
+What happens is this:
+\begin{compactdesc}
+\item[Step 1:] We begin by assuming the theorem is \textbf{false}.
+\item[Step 2:] We use that assumption to argue that some other thing happens.
+\item[Step 3:] The trick is that the ``other thing'' has to be obviously wrong.
+\item[Step 4:] Since our assumption led us to something stupid, we conclude that our assumption must be incorrect.
+\item[Step 5:] Therefore our theorem must be true.
+\end{compactdesc}
+
+This is the logic behind a proof by contradiction.
+It can be easy to get things turned around a bit when you are new to this type of argument, because you have to assume negative things a lot.
+People who are used to this kind of argument spend all their time on Step 2, and they do not usually explain that the other steps are happening, too.
+But after a bit of practice, you will find this natural and all will be well.
+
+\begin{exercise}
+Have you ever seen a proof by contradiction before?
+Try to think of one or two situations where it has come up.
+\end{exercise}
+
+\begin{exercise}
+How is a proof by contradiction like a jury trial?
+(This is a weak analogy, but there is something to be learned here.)
+\end{exercise}
+
+\subsection*{A Fact we need for the proof}
+To make the proof run, we need a fact which you likely already know.
+So that things are clearest, we state it right now up front as some thing you can and should believe.
+But so we do not get distracted, we will not give a proof of this statements.
+
+\subsubsection*{The Fundamental Theorem of Arithmetic}
+
+\begin{theorem}
+If $n$ is a natural number, then there is a unique way to write $n$ as a product of prime number factors.
+\end{theorem}
+
+There are actually two things happening here.
+First, every natural number can be written as a product of prime numbers.
+For example, $6=2\cdot 3$, and $100 = 2\cdot 2 \cdot 5 \cdot 5$.
+
+\begin{exercise}
+Write the number $204$ as a product of prime number factors.
+\end{exercise}
+
+Second, there is only one way to write a given number as a product of prime numbers.
+The only thing you can do is rearrange the list of primes so it reads in a different order.
+
+For example, the only interesting thing one can do with the expression for $6$ is reorder it like this: $6 = 3\cdot 2$.
+
+\subsection*{A Proof of The Infinitude of Primes}
+
+We shall make an argument by contradiction.
+Suppose that the set $\mathbb{P}$ is not infinite.
+That is, assume that $\mathbb{P}$ is a finite set.
+
+Since $\mathbb{P}$ is finite, there must be some list of primes which stops at some point.
+We write this list as a description of $\mathbb{P}$ as follows:
+\[
+\mathbb{P} = \{ p_1, p_2, p_3, p_4, \ldots, p_{n-1}, p_n \}.
+\]
+We do not know what the length $n$ is, or what each individual prime $p_i$ in our list is.
+That will not matter!
+What matters is that the list stops.
+
+Here is a big leap.
+Consider the new number 
+\[
+X = p_1\cdot p_2 \cdot \dots \cdot p_{n-1} \cdot p_n + 1,
+\]
+which is made by multiplying together all of the prime numbers on our list, and then adding $1$.
+Note that $X$ has to be bigger than all of the numbers in our list of prime numbers.
+
+By the Fundamental Theorem of Arithmetic, $X$ can be written as a product of prime numbers.
+Which prime numbers are factors of $X$?
+We shall check each of the prime numbers in our list.
+
+Does $p_1$ divide $X$?
+No.
+When you try to divide $X$ by $p_1$, you will get a remainder of $1$.
+
+Does $p_2$ divide $X$?
+No.
+When you try to divide $X$ by $p_2$, you will get a remainder of $1$.
+
+This little argument works \emph{for all of the prime numbers on our list}!
+
+Since $X$ has to have at least one prime factor, we see that this prime factor is some new, unknown number which was not on our list!
+This is a problem.
+All of the prime numbers are in our list.
+
+So, something about the above is wrong.
+What is wrong?
+Our assumption at the beginning.
+
+We conclude that the set $\mathbb{P}$ of all prime numbers is an infinite set.
+
+\section{Some Exercises}
+
+When confronted with a new argument, it can be helpful to work out several special cases to see what happens. 
+This particular argument can almost be used as a recipe for trying to find new prime numbers.
+When you do so, you quickly find this sequence of tasks.
+
+\begin{exercise}
+Run through the argument in the specific case where $\mathbb{P} =\{2, 3\}$.
+See that the number $X$ in this case is a prime number.
+\end{exercise}
+
+
+\begin{exercise}
+Run through the argument in the specific case where $\mathbb{P} =\{2, 3, 7\}$.
+See that the number $X$ in this case is a prime number.
+\end{exercise}
+
+\begin{exercise}
+Run through the argument in the specific case where $\mathbb{P} =\{2, 3, 7, 43\}$.
+See that the number $X$ in this case is not prime.
+What are the prime number factors of this $X$?
+Are they on the list $\mathbb{P}$?
+\end{exercise}
 
 %\begin{thebibliography}{9}
 %\end{thebibliography}
