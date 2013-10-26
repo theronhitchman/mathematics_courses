@@ -21,7 +21,7 @@
 \newtheorem{example}{Example}
 \newtheorem{exercise}[question]{Exercise}
 \newtheorem*{challenge}{Challenge}
-\newtheorem*{theorem}{Theorem}
+\newtheorem{theorem}{Theorem}
 \newtheorem*{definition}{Definition}
 
 \begin{document}
@@ -116,33 +116,48 @@ How is a proof by contradiction like a jury trial?
 (This is a weak analogy, but there is something to be learned here.)
 \end{exercise}
 
-\subsection*{Two Facts we need for the proof}
-To make the proof run, we need two facts which you likely already know.
+\subsection*{Three Facts we need for the proof}
+To make the proof run, we need three facts which you likely already know.
 So that things are clearest, we state them right now up front as things you can and should believe.
 But so we do not get distracted, we will not give proofs of these statements.
 
 \subsubsection*{The Fundamental Theorem of Arithmetic}
-
-\begin{theorem}
-If $b$ is a natural number, then there is a unique way to write $b$ as a product of prime number factors.
+Recall that we have already seen this result.
+It will be important again below.
+\begin{theorem}[Fundamental Theorem of Arithmetic]
+\label{fta}
+If $n$ is a natural number, then there is a unique way to write $n$ as a product of prime number factors.
 \end{theorem}
 
 There are actually two things happening here.
 First, every natural number can be written as a product of prime numbers.
-For example, $6=2\cdot 3$, and $100 = 2\cdot 2 \cdot 5 \cdot 5$.
-
-\begin{exercise}
-Write the number $204$ as a product of prime number factors.
-\end{exercise}
-
 Second, there is only one way to write a given number as a product of prime numbers.
 The only thing you can do is rearrange the list of primes so it reads in a different order.
 
-For example, the only interesting thing one can do with the expression for $6$ is reorder it like this: $6 = 3\cdot 2$.
+\subsubsection*{The Divisors of Squares Come in Pairs}
+
+\begin{theorem}[Divisors of squares]
+\label{squares}
+Let $a$ be a natural number.
+If a number $p$ is a prime factor of $a^2$, then $p^2$ is a factor of $a^2$.
+\end{theorem}
+
+\begin{example}
+Consider the number $a= 45$.
+The prime factorization of $a=45$ is $45 = 3\cdot 3 \cdot 5$.
+So the prime factorization of $a^2 = (45)^2 =  2025$ is 
+\[
+(45)^2 =(3\cdot 3 \cdot 5)^2 =  3\cdot 3 \cdot 3 \cdot 3 \cdot 5 \cdot 5
+\]
+Each prime factor $45$ shows up \textbf{twice} in the list of prime factors of $45^2$.
+This includes \text{both} $3$'s.
+\end{example}
+
 
 \subsubsection*{Rational Numbers in Lowest Terms}
 
-\begin{theorem}
+\begin{theorem}[Lowest Terms]
+\label{lowest-terms}
 Every rational number $a/b$ can rewritten as an equivalent rational number $c/d$ where $c$ and $d$ have no common prime number factors.
 \end{theorem}
 
@@ -167,15 +182,15 @@ Find a rational number which is equivalent to $465/225$ and is in lowest terms.
 By way of contradiction, assume that the theorem is false.
 That is, we assume that $\sqrt{2}$ is a rational number, and therefore expressable as one.
 This means that we can choose an integer $a$ and a natural number $b$ so that 
-\[
+\begin{equation}\label{big-eq}
 \sqrt{2} = \frac{a}{b}.
-\]
+\end{equation}
 
-We shall make sure to clean things up and choose $a$ and $b$ so that the rational number $a/b$ is in lowest terms.
+By Theorem \ref{lowest-terms}, we can make sure to clean things up and choose $a$ and $b$ so that the rational number $a/b$ is in lowest terms.
 \textbf{This means that $a$ and $b$ have no prime number factors in common.}
 
 Next, we will do a little algebra.
-We multiply through by $b$ to clear the fraction, and then we square both sides of the equation.
+We multiply Equation (\ref{big-eq}) through by $b$ to clear the fraction, and then we square both sides of the result.
 Then we have this:
 \[ 
 2b^2 = a^2.
@@ -185,9 +200,8 @@ Now think about the fact that the number on the right and the number on the left
 This means that the expressions of those numbers as products of prime number factors (from the Fundamental Theorem of Arithmetic) must be the same!
 
 From what we see on the left-hand side, it is clear that $2$ appears as a prime number factor in the list.
-Therefore, $2$ must be a prime number factor of the right-hand side, that is of $a^2$.
-But if $2$ is a prime divisor of $a^2$, it must be a prime number factor of $a$.
-From this we conclude that $4 = 2\cdot 2$ is a factor of $a^2$.
+Therefore, $2$ must be a prime number factor of the right-hand side. That is, $2$ is a prime factor of $a^2$.
+But if $2$ is a prime divisor of $a^2$, Theorem \ref{squares} says  $4 = 2\cdot 2$ is a factor of $a^2$.
 
 Now we go back in the other direction.
 Since $4 = 2\cdot 2$ is a factor of $a^2$ it must be a factor of the left-hand side, too.
