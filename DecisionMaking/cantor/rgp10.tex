@@ -1,0 +1,221 @@
+\documentclass[12pt,letterpaper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm,headheight=22pt]{geometry}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{lastpage}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{paralist}
+\usepackage{url}
+
+\theoremstyle{definition}
+\newtheorem{question}{Question}
+\newtheorem{example}{Example}
+\newtheorem{exercise}[question]{Exercise}
+\newtheorem*{challenge}{Challenge}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{definition}{Definition}
+\newtheorem*{observation}{Observation}
+
+\begin{document}
+
+%Paramètres de mise en forme des paragraphes selon les normes françaises
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+\setlength{\parindent}{0pt}
+
+%Paramètres relatifs aux en-têtes et pieds de page.
+\pagestyle{fancy}
+\lhead{Theron J Hitchman}
+\chead{\Large Reading and Guided Practice \#10}
+\rhead{Fall 2013}
+\lfoot{\emph{Math and Decision Making}}
+\cfoot{}
+\rfoot{\emph{\thepage\ of \pageref{LastPage}}}
+
+\section*{Introduction}
+In this reading, we introduce a model for the \emph{real numbers}. Also, we create a notational system for real numbers and explore some of its basic properties.
+
+\section*{Goals}
+At the end of this assignment, a student should be able to:
+\begin{compactitem}
+\item Give a definition of the set of real numbers.
+\item Given a real number, find the decimal notation for it.
+\item Given a decimal notation, find the associated real number.
+\item Describe the trouble with decimal notation.
+\end{compactitem}
+
+\section*{Reading and Questions for 28 October}
+
+So far we have encountered the natural numbers, $\mathbb{N}$, the integers, $\mathbb{Z}$, and the rational numbers, $\mathbb{Q}$. 
+We have also encountered a thing which we want to be a number, $\sqrt{2}$, but is not a rational number.
+Somehow, we need a bigger set of numbers.
+
+A hint lies in the way we usually arrange the numbers.
+We tend to imagine the natural numbers as being a long string of telephone poles along a country highway.
+Somehow, we have to imagine this set of things goes on ``to infinity.''
+The integers are similar, except they stretch out in both directions along the line.
+
+The rational numbers are situated in the gaps.
+The number $1/2$ sits halfway between $0$ and $1$.
+The number $-4/3$ sits a third of the way from $-1$ to $-2$ (moving left this time).
+
+\begin{exercise}
+Draw a number line and place the numbers $0$, $1$, $1/2$, $-1$, $-2$, and $-4/3$ on it.
+Be sure to place them accurately.
+\end{exercise}
+
+But where shall we place a number like $\sqrt{2}$?
+
+[Hang on to your hats, folks.
+This is what you learned in school, but it might not have been said quite this way.]
+
+\subsection*{More Numbers}
+
+So, now we fix a special line, $\ell$ and two points $O$ and $I$ on that line.
+
+\begin{definition}
+A \emph{real number} is a point on the line $\ell$.
+The set of all real numbers is denoted $\mathbb{R}$.
+\end{definition}
+
+That is a crazy definition, is it not?
+The geometric approach will make what we want to do much simpler.
+(On the other hand, it makes things like adding and multiplying much more challenging. 
+That is not a concern for us, because we will not have much use for the arithmetic of real numbers.)
+
+We are going to need a way to understand how to pick out particular real numbers and describe them.
+
+\subsection*{Geometric Positional Notation: The Decimal System}
+
+Our system of notation for integers relies on using the ten symbols of the Hindu-Arabic numerals: $\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\}$.
+Now we shall develop a way use some notation to pick out a particular number.
+Since we have ten standard symbols, we shall use a geometric system based on dividing things into tenths.
+
+To keep things simple we will work only with the set $\mathcal{R}$ of all real numbers which lie between $O$ and $I$.
+
+For each real number, that is for each point in the interval $\mathcal{R}$, we will assign a symbol of the form 
+\[
+0.a_1a_2a_3\ldots a_n\ldots,
+\]
+where each of the $a_i$'s is one of allowed digits $0, 1, 2, 3, 4, 5, 6, 7, 8, 9$.
+The important thing here is that the symbol has as many $a_i$'s as there are natural numbers!
+
+Suppose one is given a point $P$ lying in $\mathcal{R}$.
+We now describe the way to find the symbol for $P$.
+
+First, divide $\mathcal{R}$ into ten subintervals of equal length.
+These subintervals are labelled with the ten digits of our numeral system, in order, from left to right.
+
+\begin{exercise}
+Draw a diagram of the interval $R$ and its subdivision into ten equal length subintervals, with appropriate labels.
+\end{exercise}
+
+The point $P$ lies inside one of these subintervals. 
+The label on that subinterval is our $a_1$.
+
+Now, we take that subinterval and further divide it into ten more equal length subintervals. 
+Label these second level subintervals with the digits, in order, from left to right.
+We choose the number $a_2$ by whichever subinterval of this $P$ lies in.
+
+And this process continues over an over again, at each stage a new digit is chosen by which of the ten subintervals the point $P$ lies in.
+
+\begin{example}
+If the point $P$ lies in the third subinterval of $\mathcal{R}$ and then in the  the fifth subinterval of that, then its decimal notation starts with $0.24$.
+\end{example}
+
+\begin{exercise}
+Draw a diagram that explains the last example.
+\end{exercise}
+
+\begin{exercise}
+Suppose that the point $P$ lies in the first subinterval of $\mathcal{R}$ and then in the tenth and last subinterval of that.
+Draw a diagram that explains why the decimal notation for $P$ begins $0.09$.
+\end{exercise}
+
+\begin{exercise}
+Suppose that the point $P$ lies in the third subinterval of $\mathbb{R}$, then the third subinterval of that, and then the third subinterval of that.
+What is the beginnig of the decimal notation for $P$?
+\end{exercise}
+
+\begin{challenge}
+Dividing up $\mathcal{R}$ into tenths, and then dividing those intervals into tenths leads to a situation where $\mathcal{R}$ is divided up into one hundred equal length subintervals.
+If we label them by the numbers $a_1a_2$ from our system, what happens?
+Make a diagram and describe what you see.
+\end{challenge}
+
+\begin{exercise}
+Find the complete decimal notation for the points $O$ and $I$.
+\end{exercise}
+
+
+\subsection*{Finding a Given Decimal in $\mathcal{R}$}
+
+Of course, it is possible to go the other way, too.
+If you are given a real number already described in decimal notation, it is not too difficult to find where on the line it lives.
+Just work backward!
+The notation tells us how to successively locate which subintervals our point lies in.
+As we use more digits, we get more precision, because the subinterval shrink at each stage.
+
+\begin{example}
+A point with decimal notation $0.125\ldots$ lies in the sixth subinterval of the third subinterval of the second subinterval of $\mathcal{R}$.
+\end{example}
+
+\begin{exercise}
+Make a diagram that explains the last example.
+\end{exercise}
+
+\begin{exercise}
+Suppose that we divide $\mathcal{R}$ into one thousand subintervals of equal length.
+To which of these does a point with notation $0.125\ldots$ belong?
+\end{exercise}
+
+
+
+\subsection*{A Little Spot of Trouble}
+
+All of this works just great\dots expect for a little bit of trouble.
+What do we do about the points which lie in two intervals?
+For example, consider the midpoint $M$ of $\mathcal{R}$, which lies halfway between $O$ and $I$.
+
+It is possible to see $M$ as lying in \emph{both} the fifth and sixth subintervals of $\mathcal{R}$, because it is the boundary between the two.
+Depending on the choice, we get different decimal notations for $M$.
+On one hand, we could start with $0.4\ldots$ and on the other we can start with $0.5\ldots$.
+
+Suppose we choose the fifth subinterval.
+Then $M$ is the farthest right hand point for the whole rest of the process.
+Every other choice we make is forced to be the tenth subinterval, so we get digits of $9$.
+We see that $M$ has decimal notation $0.49999999\ldots$ where the $9$'s repeat the rest of the way.
+
+Instead, suppose we choose the sixth subinterval of $\mathcal{R}$.
+Then $M$ is the farthest left hand point for the whole rest of the process.
+Every other choice we make is forced to be in the first subinterval, so we get digits of $0$.
+We see that $M$ has decimal notation $0.5000000\ldots$ where the $0$'s repeat the rest of the way.
+
+
+\begin{observation}
+The decimal notation of a point $P$ in $\mathcal{R}$ can only be ambiguous if $P$ lies on the boundary between two subintervals at some point in the process.
+In such a case, $P$ will have \textbf{two} notations, one will end with an infinite string of $9$'s and the other will end with an infinte string of $0$'s.
+\end{observation}
+
+
+\begin{exercise}
+Consider the number $Q$ which is the midpoint of the segment $OM$.
+This $Q$ lies halfway between $O$ and $M$, and has two decimal notations.
+Find these two notations.
+\end{exercise}
+
+
+
+%\begin{thebibliography}{9}
+%\end{thebibliography}
+
+\end{document}
+%sagemathcloud={"zoom_width":100}
