@@ -33,7 +33,7 @@
 %Paramètres relatifs aux en-têtes et pieds de page.
 \pagestyle{fancy}
 \lhead{Theron J Hitchman}
-\chead{\Large Reading and Guided Practice \#}
+\chead{\Large Reading and Guided Practice \#12}
 \rhead{Fall 2013}
 \lfoot{\emph{Math and Decision Making}}
 \cfoot{}
@@ -45,16 +45,93 @@
 \section*{Goals}
 At the end of this assignment, a student should be able to:
 \begin{compactitem}
-\item 
-\item 
-\item 
+\item Given a rational number, identify the real number to which it corresponds.
+\item Given a real number in decimal notation, decide if that number is a rational number or not.
+\item Given a real number which possibly comes from a rational number, find the relevant rational number.
 \end{compactitem}
 A student might also be able to:
 \begin{compactitem}
-\item 
+\item Describe a few real numbers for which the decimal notations are difficult to determine exactly.
 \end{compactitem}
 
-\section*{Reading and Questions for }
+\section*{Reading and Questions for 30 October}
+
+We have developed several number systems at this point, and at each stage things have gotten larger.
+If you look, the natural numbers have a natural inclusion into the integers. 
+(Each number $n$ basically gets sent to itself.)
+Similarly, the integers have a natural inclusion into the rationals.
+(An integer $a$ gets sent to the rational number $a/1$.)
+In each of these inclusions, it is clear exactly which numbers come from the smaller set, and which ones do not.
+
+But what about the rational numbers and the real numbers?
+We now describe the situation.
+
+\subsection*{Identifying a Rational Number with a Real Number}
+
+Again, we shall focus our attention on numbers which lie between $0$ and $1$.
+Suppose we are given a rational number $a/b$ in this interval.
+Then we know these things:
+\begin{compactitem}
+\item $a$ is not negative.
+\item $a \leq b$.
+\end{compactitem}
+What real number should this correspond to?
+Well, geometrically, we divide the interval from $O$ to $I$ into $b$ equal parts, and then we take the one $a$ steps from the left.
+But that does give us the decimal notation all that easily.
+
+How do we find the decimal notation?
+Suppose the decimal notation looks like 
+\[
+0.r_1r_2r_3r_4\ldots
+\]
+Then $r_1$ marks which subinterval in our system of even division into tenths.
+So we must have that $r_1$ is the digit that gives us
+\[
+\dfrac{r_1}{10} \leq \dfrac{a}{b} < \dfrac{r_1 + 1}{10}.
+\]
+This is equivalent to 
+\[
+r_1 \leq 10\cdot \dfrac{a}{b} < r_1 + 1.
+\]
+This means we want to choose the biggest digit $r_1$ so that $r_1 \leq 10 \dfrac{a}{b}$.
+
+Once we have done so, we want to look at how much is left over: 
+\[
+x = 10\dfrac{a}{b} - r_1
+\]
+This is a new rational number. 
+And it will be smaller than $1$, because of the choices above.
+
+
+
+Notice that the process has a few steps which end with ``take the left-over part and repeat.''
+This means that it can keep going, with no well-defined end in sight.
+Of course, the process just keeps going until you get to a point where the left-over part is $x=0$.
+
+
+\begin{exercise}
+Try this basic process out with the number $7/8$.
+\end{exercise}
+
+\begin{exercise}
+Try this basic process out with the number $17/93$.
+\end{exercise}
+
+Alright, now it is time for the big secret.
+All of that work can be organized into an algorithm that can be performed quickly and accurately as long as you do the book-keeping properly.
+That algorithm is called\dots \textbf{long division}.
+
+\begin{exercise}
+Find the decimal notation representations for $7/8$ and $17/93$.
+Compare your work to what you were doing above.
+Do you see how it is the same?
+\end{exercise}
+
+\subsection*{Which Real Numbers Are Rational Numbers in Disguise?}
+
+How can we tell if one of our real numbers is a rational number?
+
+
 
 %\begin{thebibliography}{9}
 %\end{thebibliography}
