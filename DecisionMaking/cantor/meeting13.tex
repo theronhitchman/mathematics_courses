@@ -1,0 +1,71 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+
+\theoremstyle{definition}
+\newtheorem{task}{Task}
+
+\begin{document}
+
+\begin{center}
+\textbf{\Huge
+Cantor's Paradise: Class Meeting \#13
+}
+\end{center}
+
+
+\vspace{.5in}
+
+Today we take up  the set $\mathcal{R}$ of all real numbers between $0$ and $1$.
+We are going to think about them in decimal notation, where each element will be represented by a string of digits which is infinite in length. 
+If the usual decimal representation terminates, like $3/4 = 0.75$, we will pad it with a list of zeros like this: $3/4 = 0.75000000000\dots$.
+
+We begin by trying to show that $\mathcal{R}$ is countably infinite.
+Don't worry, I am not going to ask you to come up with a matching between the elements of $\mathcal{R}$ and the elements of $\mathbb{N}$! 
+What we will do is pretend we have one, and see what that might tell us.
+
+\begin{task} 
+Suppose that we have a matching between the elements of $\mathcal{R}$ and the elements of $\mathbb{N}$. 
+As we have seen with other examples of countably infinite sets, this matching will be given by an ordered list that hits each element of $\mathcal{R}$ exactly once. 
+Suppose that the list starts like this:
+
+\begin{align*}
+1 & \leftrightarrow  0.1235542346234 \dots \\
+2 & \leftrightarrow  0.1435542346234 \dots \\
+3 & \leftrightarrow  0.2335247700809 \dots \\
+4 & \leftrightarrow  0.7878709870777 \dots \\
+5 & \leftrightarrow  0.1010000010011 \dots \\
+6 & \leftrightarrow  0.0000030000040 \dots \\
+\vdots & \ \ \vdots  \qquad \ddots
+\end{align*}
+
+We make a new real number, $A$, by specifying its decimal representation. 
+Here is how: to get the $n$th digit of $A$, look at the $n$th digit past the decimal point of the $n$th item in our list. 
+If that digit is a $3$, we make the $n$th digit of $A$ a $7$; if that digit is not a $3$, then we make the $n$th digit of $A$ a $3$.
+
+Write out the first six digits of $A$.
+
+\end{task}
+
+\begin{task}
+Write a sentence or two that describes why $A$ cannot appear on our list.
+\end{task}
+
+OK. That list was not the best. Let's try another.
+
+\begin{task} 
+Each member of your group should come up with a beginning of a new list which is supposed to make a matching between $\mathcal{R}$ and $\mathbb{N}$. 
+Six elements of $\mathcal{R}$ is enough.
+\end{task}
+
+\begin{task} 
+Trade papers so that everyone in the group has someone else's list. 
+Use the recipe above to come up with an element $A'$ and explain why this new $A'$ is not on the list your partner started.
+\end{task}
+
+\begin{task} 
+Give an argument by contradiction that $\mathcal{R}$ is \textbf{not} countably infinite.
+\end{task}
+
+
+
+\end{document}
