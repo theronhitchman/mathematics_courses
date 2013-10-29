@@ -23,6 +23,7 @@
 \newtheorem*{challenge}{Challenge}
 \newtheorem*{theorem}{Theorem}
 \newtheorem*{definition}{Definition}
+\newtheorem*{observation}{Observation}
 
 \begin{document}
 
@@ -40,7 +41,7 @@
 \rfoot{\emph{\thepage\ of \pageref{LastPage}}}
 
 \section*{Introduction}
-
+We discuss the relationship between rational numbers and real numbers.
 
 \section*{Goals}
 At the end of this assignment, a student should be able to:
@@ -84,7 +85,7 @@ Suppose the decimal notation looks like
 \[
 0.r_1r_2r_3r_4\ldots
 \]
-Then $r_1$ marks which subinterval in our system of even division into tenths.
+Then $r_1$ marks the subinterval containing $a/b$ in our system of even division into tenths.
 So we must have that $r_1$ is the digit that gives us
 \[
 \dfrac{r_1}{10} \leq \dfrac{a}{b} < \dfrac{r_1 + 1}{10}.
@@ -93,7 +94,7 @@ This is equivalent to
 \[
 r_1 \leq 10\cdot \dfrac{a}{b} < r_1 + 1.
 \]
-This means we want to choose the biggest digit $r_1$ so that $r_1 \leq 10 \dfrac{a}{b}$.
+This means we want to choose the biggest digit $r_1$ so that $r_1 \leq 10 \cdot\dfrac{a}{b}$.
 
 Once we have done so, we want to look at how much is left over: 
 \[
@@ -113,15 +114,34 @@ And then you can find $r_3$ by starting over with whatever is left over from tha
 
 Geometrically, we have replaced the ``keep subdividing into tenths'' business with the algebraic step of ``scale everything out by a factor of ten.'' This has the same effect, but is more convenient for arithmetic.
 
+Notice that the process has a few steps which end with ``take the left-over part and repeat.''
+This means that it can keep going, with no well-defined end in sight.
 
 \begin{example}
 Consider the rational number $5/6$.
 We shall find the decimal notation for this as a real number.
+
+First, we note that $10\cdot\frac{5}{6} = \frac{50}{6}$ lies between $8$ and $9$, since $8\cdot 6 = 48$.
+So $r_1 = 8$ and $x_1 = \frac{50}{6} - \frac{48}{6} = \frac{2}{6}$.
+We will start over with the new number $2/6$.
+Note: We will not reduce this fraction.
+Things will be clearer for our ``big picture'' if we leave it alone.
+
+Step Two: note that $10 \cdot \frac{2}{6} = \frac{20}{6}$ lies between $3$ and $4$, since $3\cdot 6 = 18$.
+So $r_2 = 3$ and $x_2 = \frac{20}{6} - \frac{18}{6} = \frac{2}{6}$.
+
+Hey, wait! 
+That is the same as before!
+This is now stuck and will keep repeating the value $3$ for the digits $r_i$.
+
+We conclude that $\frac{5}{6} = 0.8333333\ldots$
+Writing a bunch of repeating threes is boring.
+Instead, let's put a bar over one three, and agree the bar means ``repeat this stuff over and over forever.''
+\[
+\frac{5}{6} = 0.8\overline{3}.
+\]
+We have now completely understood this one case.
 \end{example}
-
-
-Notice that the process has a few steps which end with ``take the left-over part and repeat.''
-This means that it can keep going, with no well-defined end in sight.
 
 
 \begin{exercise}
@@ -145,11 +165,97 @@ Do you see how it is the same?
 \subsection*{Which Real Numbers Are Rational Numbers in Disguise?}
 
 How can we tell if one of our real numbers is a rational number?
+The clearest way to figure this out is to observe closely what the process is, and remember not to change the denominators.
+
+Let us begin with a rational number and see what is possible.
+If our input to the long division process is $a/b$, then at each step compute some value $r_i$ and we replace the current problem with a new one, where the new input has the form $a'/b$. 
+We repeat this over and over, and there are only $b$ different options for values of the numerator, because the numerators come from this list:
+\[
+0, 1, 2, 3, \ldots, b-2, b-1
+\]
+So, somewhere along the line, but definitely by the time we have done the basic process $b$ different times, we will get a repeat of a numerator we have seen before.
+At that point, we get that the whole process starts repeating.
+
+Note: if you ever get $x = 0/b$, then you just get $0$'s from then on.
+$0$'s make life easier.
+In fact, you are probably used to just quitting after you get the first $0$.
+It seems weird to write $1/2 = 0.5000000000\ldots$ \emph{and keep writing all of the zeros}.
+Usually, people just stop and say that the decimal notation has \emph{terminated}.
+By our original definition, the notation has all of those zeros in it!
+So $0$ is a bit of a special case.
+But it is possible to have the numerators bounce around to all of the other $b-1$ choices before you get a repeat.
+
+So, we just observe this:
+
+\begin{observation}
+If a real number is an expression of a rational number then its decimal notation is \emph{eventually repeating}.
+That means that after some initial block of dancing around, we get some other block of digits which will repeat.
+Furthermore, the block of repeating digits of a number $a/b$ is no longer than $b-1$ digits long.
+\end{observation}
+
+Of course, the other direction is true, too. If the decimal notation for a number is eventually repeating, then that real number is a rational number.
+
+The way to see this is to use a clever algebraic trick, which we now illustrate on the real number 
+\[
+y = 0.73\overline{25} = 0.732525252525252525\ldots
+\]
+
+\begin{example}
+First, multiply by $100$ to move the decimal point two places.
+Then subtract out the part which does not repeat to focus our attention on the repeating bit.
+We shall just consider the number $z$ given by 
+\[
+z = 100 \cdot y - 73 = 0.\overline{25} = 0.2525252525\ldots
+\]
+We have done clean up to remove the non-repeating part for now.
+We will go back and take care of it in a minute.
+If we perform a similar trick with $z$, we can make this neat little bit of magic happen:
+\[
+100\cdot z -25 = 0.\overline{25} = z
+\]
+Hey, $z$ fits in a linear equation!
+We can solve that to find $z = \frac{25}{99}$.
+
+Finally, we put this information back in our expression for $y$
+\[
+\frac{25}{99} = 100 \cdot y -73
+\]
+and solve for $y$
+\[
+y = \frac{1}{100} \left( 73 + \frac{25}{99} \right) = \frac{73 \cdot 99 + 25}{9900} = \frac{7252}{9900} .
+\]
+That is clearly a rational number.
+If you are more comfortable, you can put this rational number into lowest terms 
+\[
+y = \frac{1813}{2475}.
+\]
+\end{example}
+
+\begin{exercise}
+Using the above example as a guide, turn the following eventually repeating decimal notations into the standard form for rational numbers.
+\begin{compactitem}
+\item $x = 0.47\overline{2}$.  \hspace{.5in} (\emph{Hint: the answer is $17/36$}.)
+\item $x = 0.\overline{428571}$
+\end{compactitem}
+\end{exercise}
 
 
+\subsection*{What about Real Numbers which are not Rational Numbers}
 
-%\begin{thebibliography}{9}
-%\end{thebibliography}
+It is convention to refer to a real number which is not a rational number as an \emph{irrational number}. 
+It is not a very nice name.
+
+So, above we described which real numbers are rational numbers by using their decimal notations.
+What does this mean for the decimal notations of irrational numbers?
+
+\begin{challenge}
+What can you say about the decimal notation of the following numbers, which are known to be irrational?
+What property to they have in common?
+\[
+\pi, \quad \sqrt{2}, \quad \sqrt{3}, \quad e
+\]
+\end{challenge}
+
 
 \end{document}
 %sagemathcloud={"zoom_width":100}
