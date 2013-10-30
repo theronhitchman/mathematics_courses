@@ -33,28 +33,88 @@
 %Paramètres relatifs aux en-têtes et pieds de page.
 \pagestyle{fancy}
 \lhead{Theron J Hitchman}
-\chead{\Large Reading and Guided Practice \#}
+\chead{\Large Reading and Guided Practice \#12}
 \rhead{Fall 2013}
 \lfoot{\emph{Math and Decision Making}}
 \cfoot{}
 \rfoot{\emph{\thepage\ of \pageref{LastPage}}}
 
 \section*{Introduction}
-
+We recap some of the different types of sets we have encountered, and try to group them by ``size."
 
 \section*{Goals}
 At the end of this assignment, a student should be able to:
 \begin{compactitem}
-\item 
-\item 
-\item 
-\end{compactitem}
-A student might also be able to:
-\begin{compactitem}
-\item 
+\item Name a variety of different types of sets.
+\item Explain clearly to someone else a surprising example of two sets that are really ``the same size.''
 \end{compactitem}
 
-\section*{Reading and Questions for }
+\section*{Reading and Questions for 30 October}
+
+How many truly different sizes of sets have we encountered?
+There are a couple of important distinctions made in our work so far.
+Where do our various examples sit?
+
+\subsection*{Finite Sets}
+
+Recall that a set is \emph{finite} if its elements can be matched with the elements of some initial segment $\lfloor n \rfloor = \{ 1, 2, 3, \ldots , n \}$ of the natural numbers.
+
+The set $\{A, B, C\}$ has three elements and is finite.
+The set of all arrangements of the letters $ABC$ is also finite, though this time there are six elements.
+The official roster for \emph{Math 1100-03 Math in Decision Making, in Fall 2013} is a set $M$ of students with $67$ elements.
+The set
+\[
+C = \{ X \mid \text{$X$ is a two element subset of $M$} \}
+\]
+is a bigger set, but it is still finite.
+In fact, $C$ has $\frac{66\cdot 67}{2} = 2211$ elements.
+
+We have also come across the sets
+\[
+B_5 = \{ \text{$0/1$ strings of length $5$} \}
+\]
+and 
+\[
+\mathcal{P}(\lfloor 5 \rfloor) = \{ X \mid \text{ $X$ is a subset of $\lfloor 5 \rfloor$} \}
+\] and seen that these are the same size.
+
+In fact, that power set construction is quite powerful, and can be used to make ever larger and larger sets. In general, if $X$ has $n$ elements, then $\mathcal{P}(X)$ has $2^n$ elements.
+
+
+\subsection*{Infintite Sets}
+
+What examples of inifinite sets have we seen?
+A partial list looks like this:
+\[
+\mathbb{N}, \mathbb{Z}, \mathbb{Q}^+, \mathbb{Q}, \mathcal{E}, \mathcal{O}, \mathcal{W}
+\]
+For the naturals, the integers, the positive rationals, the rationals, the evens, the odds, and finally, the set of all ``finite length mathematical words.''
+These funny sets have the distinguishing characteristic that they are all the same size as $\mathbb{N}$.
+Such sets are called \emph{countably infinite}.
+Of course, that means that in some sense all of these sets have the same size as each other.
+
+\begin{exercise}
+Find someone who isn't in this class, but could be, and explain to them how weird and wonderful it is that the sets $\mathbb{N}$ and $\mathbb{Q}$ have the same number of elements.
+\end{exercise}
+
+But we have encountered other infinte sets, too. 
+\begin{compactdesc}
+\item[$\mathbb{R}$]: the real numbers,
+\item[$\mathcal{R}$]: the real numbers between $0$ and $1$,
+\item[$B_{\infty}$]: the set of infinitely long $0/1$ strings,
+\item[$\mathcal{P}(\mathbb{N})$]: the collection of all subsets of the natural numbers, 
+\item[$\mathcal{C}$]: the set of all infinte words on the letters $L$ and $R$, and
+\item[$\mathcal{I}$]: the set of all infinite words on the letters $l$, $c$ and $r$,
+\item[$\mathcal{I}_c$]: the set of all infinite words on the letters $l$, $c$ and $r$, but that do not use $c$.
+\end{compactdesc}
+
+\begin{exercise}
+Are any of the sets in this last list provably of ``the same size?''
+That is, can you find a matching between any pair of these?
+Go through what you have learned so far and sort out what is what.
+
+Which sets have we not, yet, figured out size relative to some set we ``understand?''
+\end{exercise}
 
 %\begin{thebibliography}{9}
 %\end{thebibliography}
