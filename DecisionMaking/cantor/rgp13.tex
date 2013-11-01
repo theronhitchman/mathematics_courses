@@ -33,28 +33,112 @@
 %Paramètres relatifs aux en-têtes et pieds de page.
 \pagestyle{fancy}
 \lhead{Theron J Hitchman}
-\chead{\Large Reading and Guided Practice \#}
+\chead{\Large Reading and Guided Practice \#13}
 \rhead{Fall 2013}
 \lfoot{\emph{Math and Decision Making}}
 \cfoot{}
 \rfoot{\emph{\thepage\ of \pageref{LastPage}}}
 
 \section*{Introduction}
-
+We introduce another way to describe real numbers (a version of \emph{binary notation}).
+This involves making infintely long strings of only two symbols.
 
 \section*{Goals}
 At the end of this assignment, a student should be able to:
 \begin{compactitem}
-\item 
-\item 
-\item 
+\item Find the binary notation for a real number in the set $\mathcal{R}$.
+\item Given the binary notation for a real number, locate the element of $\mathcal{R}$.
 \end{compactitem}
-A student might also be able to:
+Also, a student may be able to:
 \begin{compactitem}
-\item 
+\item Describe the possiblities for confusion when using binary notation.
 \end{compactitem}
 
-\section*{Reading and Questions for }
+\section*{Reading and Questions for 4 November}
+
+Our principal way of understanding real numbers uses decimal notation.
+We build decimal notation (as a system) by successively dividing intervals into equal tenths.
+We divide our given unit interval $OI$ into $10$ equal subintervals, then we divide each of those intervals into ten equal subintervals, then we divide each of \emph{those} intervals into $10$ equal subintervals, and so on.
+
+
+Ther is not anything special about the number $10$ here.
+(Well, humans generally have $10$ fingers.)
+We can set up the same kind of system using other numbers as a base.
+
+\subsection*{Binary Notation}
+
+We begin with the portion of sime line between two marked points $O$ and $I$.
+Like before, we think of these points as representing the real numbers between $0$ and $1$.
+
+Divide this interval into two subintervals of equal size.
+We shall label these new intervals $L$ and $R$, for ``left'' and ``right.''
+
+\begin{exercise}
+Draw this picture and label the subintervals.
+\end{exercise}
+
+Points in the left-hand interval will have binary notation starting with the symbol $L$.
+Points in the right-hand interval will have binary notation starting with the symbol $R$.
+
+Next we further divide these intervals into two more subintervals each.
+These new subintervals get labels $LL$, $LR$, $RL$, and $RR$, reading from left to right.
+
+\begin{exercise}
+Draw the diagram showing both the two subintervals at level one and the four intervals at level two.
+Label all of these intervals clearly.
+\end{exercise}
+
+This process of subdivision continues on for as long as we can stomach it.
+(Well, longer, really.)
+
+\begin{exercise}
+Make a much larger diagram, and label all of the first \textbf{three} levels of subdivision in this $L$/$R$ system.
+(Perhaps you want a fresh piece of paper?)
+\end{exercise}
+
+Just as a decimal notation keeps going, making ever longer and longer strings of digits, binary notation is an infinite string of the symbols $L$ and $R$.
+Any initial finite block of symbols represents a particular subinterval where the point must lie.
+To find the next symbol in the notation, you divide the current subinterval into two equal pieces and pick out $L$ if the point lies in the left hand one or $R$ if the point lies in the right-hand one.
+
+\begin{exercise}
+The symbol $LRRL$ corresponds to some subinterval.
+Explain why this interval has length $1/16$ that of the original unit interval.
+What are the endpoints of this interval?
+(Try to express the endpoints as rational numbers.)
+\end{exercise}
+
+\begin{exercise}
+The symbol $RLRRRRLR$ corresponds to some subinterval.
+What is the length of this interval?
+What are the endpoints of this interval?
+(Try to express the endpoints as rational numbers.)
+\end{exercise}
+
+\begin{exercise}
+Find the first five symbols in the binary notation for the rational number $1/3$.
+\end{exercise}
+
+\begin{exercise}
+Find the first five symbols in the binary notation for a real number whose decimal notation starts
+$0.2433\ldots$
+\end{exercise}
+
+
+\subsection*{Challenge}
+
+When we studied decimal notation, we saw that it is possible for a given real number to have \emph{two} decimal notations.
+For example, $0.24999999999\ldots$ is really the same point as $0.25000000000\ldots$
+
+A similar ambiguity can happen with binary notation!
+
+\begin{challenge}
+Describe the way in which a real number might have two binary notations.
+Be as specific as you can.
+
+Can you give a concrete example?
+\end{challenge}
+
+
 
 %\begin{thebibliography}{9}
 %\end{thebibliography}
