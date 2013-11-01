@@ -1,5 +1,6 @@
 \documentclass[12pt]{amsart}
 \usepackage[margin=1in]{geometry}
+\usepackage{paralist}
 
 \theoremstyle{definition}
 \newtheorem{task}{Task}
@@ -16,8 +17,7 @@ Cantor's Paradise: Class Meeting \#13
 \vspace{.5in}
 
 Today we take up  the set $\mathcal{R}$ of all real numbers between $0$ and $1$.
-We are going to think about them in decimal notation, where each element will be represented by a string of digits which is infinite in length.
-If the usual decimal representation terminates, like $3/4 = 0.75$, we will pad it with a list of zeros like this: $3/4 = 0.75000000000\dots$.
+We are going to think about them in decimal notation, where each element will be represented by a string of digits which is infinite in length, like $0.112343145213\ldots$
 
 We begin by trying to show that $\mathcal{R}$ is countably infinite.
 Don't worry, I am not going to ask you to come up with a matching between the elements of $\mathcal{R}$ and the elements of $\mathbb{N}$!
@@ -26,25 +26,34 @@ What we will do is pretend we have such a matching, and see what that might tell
 \begin{task}
 Suppose that we have a matching between the elements of $\mathcal{R}$ and the elements of $\mathbb{N}$.
 As we have seen with other examples of countably infinite sets, this matching will be given by an ordered list that hits each element of $\mathcal{R}$ exactly once.
-Suppose that the list starts like this:
-
+Suppose that the list \textbf{starts} like this:
 \begin{align*}
-1 & \leftrightarrow  0.1235542346234 \dots \\
-2 & \leftrightarrow  0.1435542346234 \dots \\
+1 & \leftrightarrow  0.3374543377733 \dots \\
+2 & \leftrightarrow  0.3733333777777 \dots \\
 3 & \leftrightarrow  0.2335247700809 \dots \\
 4 & \leftrightarrow  0.7878709870777 \dots \\
 5 & \leftrightarrow  0.1010000010011 \dots \\
 6 & \leftrightarrow  0.0000030000040 \dots \\
 \vdots & \ \ \vdots  \qquad \ddots
 \end{align*}
+This list goes on and on to pair a real number with each element of $\mathbb{N}$.
 
-We make a new real number, $A$, by specifying its decimal representation.
+We want to make a \emph{new real number}, $A$, by specifying its decimal representation.
 Here is how: to get the $n$th digit of $A$, look at the $n$th digit past the decimal point of the $n$th item in our list.
 If that digit is a $3$, we make the $n$th digit of $A$ a $7$; if that digit is not a $3$, then we make the $n$th digit of $A$ a $3$.
 
 Write out the first six digits of $A$.
 
 \end{task}
+
+\begin{task}
+\begin{compactitem}
+\item Explain why $A$ is not equal to the first item on the list.
+\item Explain why $A$ is not equal to the second item on the list.
+\item Explain why $A$ is not equal to the third item on the list.
+\end{compactitem}
+\end{task}
+
 
 \begin{task}
 Write a sentence or two that describes why $A$ cannot appear on our list.
