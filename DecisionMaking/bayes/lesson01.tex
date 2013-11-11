@@ -1,0 +1,110 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{paralist}
+
+\theoremstyle{definition}
+\newtheorem{question}{Question}
+
+\begin{document}
+\begin{center}
+\textbf{\Huge
+Lesson Plan: Meeting One
+}
+\end{center}
+\vspace{.5in}
+
+The main goal of meeting one is to get students in the frame of mind to think about probability, and \emph{conditional probability} in particular.
+
+\section*{The Monty Hall Problem}
+
+\subsection*{Intro: Game Show!}
+
+Play Game show host \& do the Monty Hall problem. 
+
+\emph{materials needed:} three cups for ``doors.'' two prizes (small candy bars?), showmanship
+
+Run the game twice, two different student ``volunteers.'' 
+After the fun, carefully explain the mechanics of the game. 
+Also, give a bit of history by talking about \emph{Let's Make a Deal!} and Monty Hall and Marilyn Vos Savant.
+
+\subsection*{Core Activity: Play the game}
+
+Point out that the interesting question is to find the best strategy for maximizing the chance of winning. 
+(No guarantees, but find the better chance.) 
+The two strategies are \emph{keep} and \emph{switch}. 
+
+\emph{materials needed:} enough ``markers'' of some sort to use as fake prizes.
+
+Split class into teams of two. 
+Have them tear up a sheet of paper to make three little screens labeled A, B, and C. 
+Students take turns playing host and contestant. 
+Each should play the game 10 times with a single strategy. 
+One person plays the \emph{keep} strategy ten times. 
+Then they switch roles and the second person plays the \emph{switch} strategy ten times. 
+Keep a record of wins and losses.
+
+\subsection*{Surprise: Show the simulation}
+
+Ask the class which seems a better strategy. 
+Explain that you are doing a lot of trials because that is what probability is really about: \emph{long run averages}.
+
+Show them simple simulations. 
+Explain the code and run it in front of them. 
+Discuss.
+
+Sage code for \emph{keep}.
+
+\begin{verbatim}
+def stay_check(k=1000):
+    doors = [1,2,3]
+    win_count , loss_count, trial = 0, 0, 0
+    while trial < k:
+        winner = randint(1,3)
+        pick = randint(1,3)
+        for door in doors:
+            if door != winner and door != pick:
+                open = door
+                break
+        if pick == winner:
+            win_count = win_count + 1
+        else:
+            loss_count = loss_count + 1
+        trial = trial + 1
+    print "%d wins and %d losses" % (win_count, loss_count)
+
+stay_check(10^6)
+\end{verbatim}
+
+\clearpage
+
+Sage code for \emph{switch}.
+
+\begin{verbatim}
+def switch_check(k=1000):
+    doors = [1,2,3]
+    win_count , loss_count, trial = 0, 0, 0
+    while trial < k:
+        winner = randint(1,3)
+        pick = randint(1,3)
+        for door in doors:
+            if door != winner and door != pick:
+                open = door
+                break
+        for door in doors:
+            if door != pick and door != open:
+                new = door
+                break
+        if new == winner:
+            win_count = win_count + 1
+        else:
+            loss_count = loss_count + 1
+        trial = trial + 1
+    print "%d wins and %d losses" % (win_count, loss_count)
+
+switch_check(10^6)
+\end{verbatim}
+
+
+
+
+\end{document}
