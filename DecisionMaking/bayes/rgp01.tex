@@ -1,0 +1,188 @@
+\documentclass[12pt,letterpaper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm,headheight=22pt]{geometry}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{lastpage}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{paralist}
+\usepackage{url}
+
+\theoremstyle{definition}
+\newtheorem{question}{Question}
+\newtheorem{example}{Example}
+\newtheorem{exercise}[question]{Exercise}
+\newtheorem*{challenge}{Challenge}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{definition}{Definition}
+
+\begin{document}
+
+%Paramètres de mise en forme des paragraphes selon les normes françaises
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+\setlength{\parindent}{0pt}
+
+%Paramètres relatifs aux en-têtes et pieds de page.
+\pagestyle{fancy}
+\lhead{Theron J Hitchman}
+\chead{\Large Reading and Guided Practice \#1}
+\rhead{Fall 2013}
+\lfoot{\emph{Math and Decision Making}}
+\cfoot{}
+\rfoot{\emph{\thepage\ of \pageref{LastPage}}}
+
+\section*{Introduction}
+We take up the basics of probability. This includes the two styles of language most commonly used to deal with probability questions.
+
+\section*{Goals}
+At the end of this assignment, a student should be able to:
+\begin{compactitem}
+\item Describe the basic situation where the theory of probabilities might be useful.
+\item Describe the idea of bias.
+\item Make clear statements about probability using the language of propositions.
+\item Make clear statements about probability using the language of events.
+\item Translate between one language and the other.
+\end{compactitem}
+A student might also be able to:
+\begin{compactitem}
+\item Solve a challenging problem about probabilities due to Laplace, one of the founders of probability theory.
+\end{compactitem}
+
+\section*{Reading and Questions for 13 November}
+
+\subsection*{The Basic Ideas of Probability}
+
+It is often the case that life presents us with situations involving \emph{chance}.
+Many people seek out these situations, say via gambling, for the heightened excitement inherent when things are unpredictable.
+
+Mathematicians and Statisticians have developed ways of thinking about unpredictable situations, and this is called \emph{probability theory}.
+There is a big indicator for when the ideas of probability might be useful:
+The situation has to involve some true randomness.
+Somehow, the variablity in the potential outcomes is not understood, or too complicated to possibly be understood, so things are ``up to chance.''
+
+\subsubsection*{The Idea of Bias}
+
+Sometimes, this manifests itself in the fact that all possible outcomes are known, and all are equally likely.
+This is called a \emph{lack of bias}. 
+For example, rolling a regular six-sided die is usually considered an unbiased situation.
+The key here is that we assume each of the six sides is as likely as any of the others to land up on any particular roll.
+If the die is ``loaded'' so that six is much more likely to come up than any other side, then the situation is biased toward six.
+
+It is common in probability theory to assume that the situation is free from bias.
+But probability has learned to deal with bias, too, as long as it is not hidden.
+If you know in advance that what should be a fair die has been relabeled so that the sides read $1, 2, 3, 4, 6, 6$, then you can still make reasonable arguments, even though the situation is clearly biased toward six.
+
+\subsubsection*{The Basic Mode of Probability}
+
+Probability theory never tries to answer the question of what might happen directly.
+It really cannot say, "The die will come up $4$."
+That kind of certainty is not available when true randomness is involved.
+Instead, probability attempts to describe which outcomes are more or less likely than other outcomes.
+The way in which probability information is described is always ``over the long run.''
+
+The idea is that we imagine the situation being presented a great many number of times. 
+Each occurance of the situation is called a \emph{trial}.
+Probability then tries to describe approximately how many times a certain outcome will arise out of all the trials attempted.
+
+For example, consider again the six-sided die relabelled above.
+An individual trial consists of rolling the die once.
+Over a very great number of trials (i.e. after rolling the die lots of times) we expect that roughly $\frac{1}{3}$ of the outcomes will be $6$, where only about $\frac{1}{6}$ of the outcomes will be $4$.
+So we say that the probability of a $6$ is equal to $\frac{1}{3}$, but the probability of $4$ is $\frac{1}{6}$.
+
+As another example, we discussed the Monty Hall problem in class, and ran simulations.
+Each instance of the Monty Hall problem (pick a door, have a door opened and get an offer to switch, then switch-or not) is a trial.
+The short computer script we saw ran a million trials.
+I have run this little simulation many times, and I can now say with some confidence that it looks like with the switching strategy the probability of winning is about $\frac{2}{3}$. 
+This doesn't mean I expect to win two out of every three.
+It does mean that over a very large number of attempts, I expect to win about two-thirds of the time.
+
+\subsection*{The Two languages of Probability}
+
+We have already encountered some of the basic terms of probability theory:
+\begin{compactdesc}
+\item[outcome] A possible final state of the chance event.
+\item[trial] One run through of the chance event with a resolution or observation.
+\item[bias] A systemic skewing of the results of a chance event towards some set of outcomes and away from others.
+\end{compactdesc}
+
+Past these basics, there are two ways to approach probability theory.
+These versions are completely equivalent!
+The only difference lies in the vocabulary used to describe the setups.
+
+\subsubsection*{The language of Propositions}
+
+In this setup, the chance events are described with simple, declarative sentences, called \emph{propositions}, or \emph{statements}.
+Then these propositions are either true or false, and probability of a proposition describes the likelyhood that the statement is true.
+
+For example, the proposition
+\begin{quote}
+It will rain tomorrow.
+\end{quote}
+has either the value true or false, but the actual outcome is determined by a complicated set of conditions.
+Meteorologists do their best to describe the probability that the statement is true.
+
+Of course, the best they can really say is, ``If we were to have conditions just like today over a sequence of many, many days, then about [whatever fraction] of the time we will get rain the next day.''
+
+An important thing to note is that some sentences don't really fall into the realm of probability.
+The sentence must be discernably true or false.
+We can wait a day and observe the conditions to see if there is rain or not. 
+But some sentences are not so easy.
+For example, \textbf{Life is meaningless} is not the kind of thing one can objectively measure or observe and decide to everyone's mutual satisfaction.
+Matters of opinion must be left out of probability theory.
+
+The language of propositions is favored by philosophers and logicians, and works naturally for everyday conversations.
+
+\subsubsection*{The Language of Events}
+
+In contrast, the language of events describes probability using the mathematical theory of sets and elements.
+One collects all of the possible outcomes into a set called the \emph{sample space}.
+
+Then certain outcomes are collected into subsets, called \emph{events}.
+
+For example, for our unfair die above, the sample space is the set $\{1,2,3,4,6\}$.
+The event that a six is rolled is the set $\{6\}$.
+The event that the number rolled is even is the set $\{2,4,6\}$.
+
+\begin{exercise}
+Take the examples from the last two subsections and tranlate them into the \emph{other} language.
+\end{exercise}
+
+We will use the language of events because it is easier to be precise with sets and subsets.
+But I think it is important to understand the two languages and how to translate from one to another, because your conversation partner might be more comfortable with different vocabulary.
+
+\subsection*{Challenge: Laplace's Trick Question}
+
+Pierre-Simon Laplace was one of the first people to take up probability as a mathematical study.
+He posed the following interesting question, which involves a \emph{compound event}:
+
+You have two urns.
+Urn 1 (labeled ``heads'') has 3 red balls in it and 1 green ball in it.
+Urn 2 (labeled ``tails'') has 1 red ball in it and 3 green balls in it.
+
+The experiment to be conducted is to flip a coin, and then choose two balls from the corresponding urn, \emph{with replacement}. 
+With replacement means that you take a ball out, note its color, and put it back in the urn before drawing again.
+
+\begin{exercise}
+Describe the sample space for this situation.
+\end{exercise}
+
+\begin{challenge}
+What is the probability of the event that one draws two red balls?
+\end{challenge}
+
+
+
+
+%\begin{thebibliography}{9}
+%\end{thebibliography}
+
+\end{document}
+%sagemathcloud={"zoom_width":100}
