@@ -1,0 +1,225 @@
+\documentclass[12pt,letterpaper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm,headheight=22pt]{geometry}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{lastpage}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{paralist}
+\usepackage{url}
+
+\theoremstyle{definition}
+\newtheorem{question}{Question}
+\newtheorem{example}{Example}
+\newtheorem{exercise}[question]{Exercise}
+\newtheorem*{challenge}{Challenge}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{definition}{Definition}
+
+\begin{document}
+
+%Paramètres de mise en forme des paragraphes selon les normes françaises
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+\setlength{\parindent}{0pt}
+
+%Paramètres relatifs aux en-têtes et pieds de page.
+\pagestyle{fancy}
+\lhead{Theron J Hitchman}
+\chead{\Large Reading and Guided Practice \#}
+\rhead{Fall 2013}
+\lfoot{\emph{Math and Decision Making}}
+\cfoot{}
+\rfoot{\emph{\thepage\ of \pageref{LastPage}}}
+
+\section*{Introduction}
+We introduce our idea of probability as a measurement, and we discuss some basic ways to compute probability of events.
+
+\section*{Goals}
+At the end of this assignment, a student should be able to:
+\begin{compactitem}
+\item State clearly the frequentist interpretation of probability
+\item Compute the probability of some simple events.
+\item Recognize situations where ``disjointness'' applies, and appropriately use some rules to compute probability in these situations.
+\end{compactitem}
+
+\section*{Reading and Questions for 15 November}
+
+\subsection*{An Example}
+
+Consider a game where we roll two fair dice. 
+These dice are the usual standard gaming dice, with six sides labeled with the numbers 1 through 6. 
+(If you like the traditional kind, then the dice do not have number labels, but instead have the corresponding number of little dents. 
+Those dents are called \emph{pips}. 
+That is not really important, but it is kind of neat how there are special words for lots of crazy things.)
+
+The outcomes in this situation are the pairs of numbers that show up when then the dice stop rolling.
+We can then represent the sample space here as the collection of all possible pairs of numbers.
+The idea behind this is to remember that there are two dice!
+Moving horizontally changes the value on one die, but leaves the other alone.
+If we switch the roles of the dice, the same is true for moving vertically.
+\begin{center}
+\begin{tabular}{cccccc}
+1,1 & 1,2 & 1,3 & 1,4 & 1,5 & 1,6\\
+2,1 & 2,2 & 2,3 & 2,4 & 2,5 & 2,6\\
+3,1 & 3,2 & 3,3 & 3,4 & 3,5 & 3,6\\
+4,1 & 4,2 & 4,3 & 4,4 & 4,5 & 4,6\\
+5,1 & 5,2 & 5,3 & 5,4 & 5,5 & 5,6\\
+6,1 & 6,2 & 6,3 & 6,4 & 6,5 & 6,6
+\end{tabular}
+\end{center}
+
+Notice that the sample space has $36$ different elements in it.
+Each of these outcomes is equally like as any other, so this is an unbiased situation.
+
+\subsection*{The Frequentist Interpretation of Probability}
+
+In the language of events, an \emph{event} is represented by some subset of the sample space.
+
+\begin{example}
+The event that both dice show a $1$ is the set $A = \{ (1,1) \}$.
+\end{example}
+
+\begin{example}
+The event that the two dice show numbers which add to $3$ is the set $B = \{ (1,2), (2,1) \}$.
+\end{example}
+
+\begin{exercise}
+Write down the event that at least one of the dice shows a $5$ as a set.
+\end{exercise}
+
+But how likely are these events?
+For each event, we want to assign a number representing how common we think it is.
+That is, for each subset of the sample space, we want to give a number representing the probability we get that event in a trial.
+
+Mathematicians have settled on the following basic set-up: Probabilities should be numbers between $0$ and $1$, with $0$ representing that an event has basically no chance of happening, and $1$ meaning that the event will almost surely happen.
+
+But how shall we make something reasonable? The \emph{frequentist interpretation} of probability is the idea that the probabilty of an event is the approximate proportion of times the event occurs when you run a very large number of trials.
+
+\begin{quote}
+If all outcomes of a game of chance are equally likely (i.e. the situation is unbiased), then the probability of an event $A$ is
+\[ \mathrm{Pr}(A) =\dfrac{\text{number of elements in the event}}{\text{number of elements in the sample space}}\]
+\end{quote}
+
+\begin{example}
+In our dice rolling example, the probability of the event that two $1$'s are up is
+\[
+\mathrm{Pr}(\text{two ones}) = \dfrac{1}{36}.
+\]
+This is because there is only one outcome in this event, and there are thirty-six total outcomes.
+\end{example}
+
+\begin{exercise}
+Explain why the probability that the two numbers in our dice-rolling trial sum to 3 is $\frac{2}{36}$.
+\end{exercise}
+
+\begin{exercise}
+Find the probability that at least one of the two dice shows up as a $5$.
+\end{exercise}
+
+
+\subsection*{Disjoint Events and the Addition Rule}
+
+Two events are called \emph{disjoint} if the corresponding sets have no outcomes in common.
+For example, the event that both dice show $1$ is disjoint from the event that the numbers on the dice sum to $3$.
+In such a case, we have a simple rule for computing a special type of more complicated probability.
+This is often called \emph{the addition rule}.
+
+\begin{quote}
+If two events $A$ and $B$ are disjoint, then the probability of the compound event $A$ or $B$ is the sum of the probability of $A$ and the probability of $B$.
+\[
+\mathrm{Pr}(\text{$A$ or $B$}) = \mathrm{Pr}(A) + \mathrm{Pr}(B)
+\]
+\end{quote}
+
+Note that in mathematics we use the word ``or'' to mean ``this or that or both.''
+This differs from spoken English, where sometimes ``or'' means ``this or that, but not both.'' 
+Because we need to be clear about our language, mathematicians have settled on just this one version of the word ``or'' and we stick to it always.
+Be careful!
+
+Sometimes it is helpful to have notation for this, so we use the concept of the \emph{union} of two sets.
+The union of $A$ and $B$ is the set which consists of all those things which are elements of $A$ or elements of $B$, or are elements of both sets.
+\[
+A \cup B = \{ x \mid \text{$x$ is an element of $A$ or $x$ is an element of $B$} \}
+\]
+
+\begin{example}
+The probability that both dice show $1$ or that the dice sum to $3$ is 
+\[
+\mathrm{Pr}(A\cup B) = \mathrm{Pr}(A) + \mathrm{Pr}(B) = \dfrac{1}{36} + \dfrac{2}{36} = \dfrac{3}{36}
+\]
+\end{example}
+
+
+\begin{exercise}
+Write a few sentences to explain why the event that the numbers sum to $3$ is disjoint from the event that at least one $5$ is showing.
+
+Then use the addition rule to compute the probabilty that the numbers sum to $3$ or at least one of the dice shows a $5$.
+\end{exercise}
+
+
+\subsection*{The Most Common Error}
+
+Be careful with the addition rule!
+The most common error is to forget to check that the events are disjoint, but to use the rule anyway.
+If your events are not disjoint, then the addition rule will lead you in the wrong direction.
+
+\begin{example}
+Suppose that the two dice in our example are different colors so we can keep them apart clearly. Say, one die is red and the other blue.
+
+Then the probability that the red die shows a $5$ is $1/6$.
+The probability that the blue die shows a $5$ is $1/6$.
+So you might be tempted to say that the probability that at least one of the two dice shows a $5$ is $1/6 + 1/6 = 1/3$.
+
+This is incorrect. 
+Why?
+\end{example}
+
+
+\subsection*{Complementary Events}
+
+Two events are called \emph{complementary} when they are disjoint, but their union is the whole sample space.
+
+For example, the event 
+\begin{quote}
+At least one die shows a $5$.
+\end{quote}
+and the event
+\begin{quote}
+Neither die shows a $5$.
+\end{quote}
+are complementary.
+It is impossible to have an outcome which satisfies both events, but any outcome is in one of the two events.
+
+The addition rule has a useful consequence:
+\begin{quote}
+If the events $A$ and $B$ are complementary, then
+\[
+\mathrm{Pr}(A)  = 1 - \mathrm{Pr}(B)
+\]
+\end{quote}
+
+\begin{exercise}
+Consider the event ``Neither of the dice shows a $5$.''
+Compute the probability of this event in two ways:
+\begin{compactitem}
+\item Directly, using the definition of the probability.
+\item Indirectly, using the rule about complementary events.
+\end{compactitem}
+You should get the same result from these two computations.
+\end{exercise}
+
+
+
+%\begin{thebibliography}{9}
+%\end{thebibliography}
+
+\end{document}
+%sagemathcloud={"zoom_width":100}
