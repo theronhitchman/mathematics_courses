@@ -70,6 +70,7 @@ Then these knots are equivalent by ambient isotopy if and only if there is a fin
 
 This is exceedingly good news!
 You don't have to check ``everything,'' just sequences of these special moves on knots.
+%Better, the moves are very tightly constrained, so there is a very short list of things to think about.
 
 The general problem for comparing two knots is still unsolved, but significant work has been done on the ``unknotting problem.''
 \begin{problem}
@@ -95,6 +96,7 @@ For any planar projection of the unknot having $n$ crossings, there is a sequenc
 
 So what are the Reidemeister moves?
 Each move describes a way in which you can change some small bit of information about a crossing in your planar projection without changing the essential qualities of the knot.
+%Think of these as small little ``atoms'' of an ambient isotopy. Any big move you want to do with a knot can be broken down into a sequence of these tiny movements.
 There are three types of moves, and they are easier to see than to describe.
 
 Reidemeister Move 1 either twists or untwists a simple loop in a single strand.
@@ -102,40 +104,40 @@ Note this changes the number of crossings by one: an increase of one crossing if
 
 \begin{figure}[h]
     \centering
-    \begin{subfigure}{.3\textwidth}
+    \begin{subfigure}{.25\textwidth}
         \centering
         \includegraphics[width=\textwidth]{knotpics/r1.png}
-        \caption{Type 1 Reidemesiter Moves}
+        \caption{Type 1 Reidemeister Moves}
     \end{subfigure}
     \hspace{1in}
-    \begin{subfigure}{.3\textwidth}
+    \begin{subfigure}{.25\textwidth}
         \centering
         \includegraphics[width=\textwidth]{knotpics/r2.png}
-        \caption{Type 2 Reidemesiter Moves}
+        \caption{Type 2 Reidemeister Moves}
     \end{subfigure}
     \caption{Reidemeister Moves of type 1 and 2}
 \end{figure}
 
 Reidemeister Move 2 either creates or removes a pair of consecutive overcrossings (or undercrossings) of one strand across another.
 Note that this changes the number of crossings by 2, up or down.
+Type 3 Reidemeister moves do not change the number of crossings in the planar projection, as all we do is move one strand completely across a crossing of two other strands. See Figure 2.
 
-Type 3 Reidemeister moves do not change the number of crossings in the planar projection, as all we do is move one strand completely across a crossing of two other strands.
-
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
-    \includegraphics[width=.3\textwidth]{knotpics/r3.png}
+    \includegraphics[width=.25\textwidth]{knotpics/r3.png}
     \caption{Type 3 Reidemeister Moves}
 \end{figure}
 
 
+\clearpage
 
 \subsubsection*{Examples and Practice}
 
 Let us see how to handle some examples of equivalence of planar projections using Reidemeister moves and isotopy.
 
 \begin{example}
-A simple trefoil with a cheap disguise.
-We just untwist.
+Here is a simple trefoil with a cheap disguise.
+To restore it to its proper state, we just untwist. This is a single Reidemeister move of type 1.
 \end{example}
 
 \begin{figure}[h]
@@ -146,7 +148,7 @@ We just untwist.
 
 \begin{example}
 A trefoil with a better disguise.
-Here we bring the far right strand ``under the rest of the diagram'' and then untwist.
+Here we bring the far right strand ``under the rest of the diagram'' and then untwist. Of couse, dragging one string all the way under the knot is not a Reidemeister move, because too much happens. Let's see how to break it into a sequence of Reidemeister moves. This will be ten RMs total.
 \end{example}
 
 \begin{figure}[h]
@@ -168,16 +170,44 @@ Note that the upper left projection in Figure 4b is the same as the lower left i
 We are getting closer.
 The final few diagrams look like this:
 
-\clearpage
+
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=.5\textwidth]{knotpics/trefoil-better3.png}
+    \includegraphics[width=.4\textwidth]{knotpics/trefoil-better3.png}
     \caption{Finally!}
 \end{figure}
 
 Well, that was exciting.
+Did you follow each move?
+Again, that was a simple kind of isotopy that an experienced person might just see, but then it was broken down into a sequence of the very small Reidemeister moves.
 Now we should practice.
+
+\begin{exercise} Consider the two planar projections of the knot below.
+Use a sequence of Reidemeister moves to demonstrate that these knots are equivalent.
+Draw each intermediate knot, and label the sequence of Reidemeister moves you use as you go.
+(Hint: This can be achieved with three total moves, one Reidemeister Move of each type, if done in a particular sequence. Of course, there are lots of ways to do it if you allow yourself more moves, which you should.)
+\end{exercise}
+
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}{.4\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{knotpics/exercise2-1.png}
+        \caption{A nice knot.}
+    \end{subfigure}
+    \hspace{2cm}
+    \begin{subfigure}{.4\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{knotpics/exercise2-2.png}
+        \caption{Another nice knot.}
+    \end{subfigure}
+    \caption{Show these are the same by Reidemeister moves.}
+\end{figure}
+
+\clearpage
+
 
 \begin{exercise} Consider the two planar projections of the figure eight knot below.
 These are equivalent by a process similar to our second example above.
@@ -201,29 +231,6 @@ Draw each intermediate knot, and label the sequence of Reidemeister moves you us
     \caption{Show these are the same by Reidemeister moves.}
 \end{figure}
 
-\clearpage
-
-\begin{exercise} Consider the two planar projections of the knot below.
-Use a sequence of Reidemeister moves to demonstrate that these knots are equivalent.
-Draw each intermediate knot, and label the sequence of Reidemeister moves you use as you go.
-\end{exercise}
-
-
-\begin{figure}[h]
-    \centering
-    \begin{subfigure}{.4\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{knotpics/exercise2-1.png}
-        \caption{A nice knot.}
-    \end{subfigure}
-    \hspace{2cm}
-    \begin{subfigure}{.4\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{knotpics/exercise2-2.png}
-        \caption{Another nice knot.}
-    \end{subfigure}
-    \caption{Show these are the same by Reidemeister moves.}
-\end{figure}
 
 
 
